@@ -11,11 +11,13 @@ package cit260.team4.battleship;
  */
 public class CIT260Team4Battleship {
 
-    /**
-     * @param args the command line arguments
-     */
+    string firstName;//enter player first name
+       string lastName;//enter player last name     
     public static void main(String[] args) {
-        // TODO code application logic here
+        public void getName(){}
+        public void displayHelp() {}
+        public void startGame(){}
+        public void playerMove(){}
     }
     
 }

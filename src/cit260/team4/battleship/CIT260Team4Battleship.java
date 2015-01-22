@@ -21,6 +21,10 @@ public class CIT260Team4Battleship {
         CIT260Team4Battleship game = new CIT260Team4Battleship(); // constructor - creates instance of class caled "game"
         game.getName(); //calls the getName() method for the "game" instance of the class
         game.displayHelp(); //calls the getName() method for the "name" instance of the class
+        
+        Ships ship = new Ships(); //instance creation for "Ships" class
+        ship.showName(); //calling methods in "Ships" class
+        ship.showSize();
     }
         public void getName(){
             Scanner input = new Scanner(System.in);   // gets input using scanner and puts it into variable firstName

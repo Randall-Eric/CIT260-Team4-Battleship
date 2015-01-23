@@ -25,6 +25,10 @@ public class CIT260Team4Battleship {
         Ships ship = new Ships(); //instance creation for "Ships" class
         ship.showName(); //calling methods in "Ships" class
         ship.showSize();
+        
+        ScoreBoard ScoreBoard = new ScoreBoard(); //instance creation for "ScoreBoard" class
+        ScoreBoard.showHighScore(); //calling methods in "ScoreBoard" class
+        
     }
         public void getName(){
             Scanner input = new Scanner(System.in);   // gets input using scanner and puts it into variable firstName

@@ -29,6 +29,9 @@ public class CIT260Team4Battleship {
         ScoreBoard ScoreBoard = new ScoreBoard(); //instance creation for "ScoreBoard" class
         ScoreBoard.showHighScore(); //calling methods in "ScoreBoard" class
         
+        Gameplay gameplay = new Gameplay(); //instance creation for "Gameplay" class
+        gameplay.playerTurn(); //calling playerTurn method in "Gameplay" class. 
+        gameplay.ai_Turn(); //calling ai_Turn method in "Gameplay" class. 
     }
         public void getName(){
             Scanner input = new Scanner(System.in);   // gets input using scanner and puts it into variable firstName

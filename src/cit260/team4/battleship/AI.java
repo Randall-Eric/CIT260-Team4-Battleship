@@ -1,0 +1,20 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package cit260.team4.battleship;
+
+/**
+ *
+ * @author MatthewSweeney
+ */
+public class AI {
+    int turns=25;
+    String name="Computer";
+    
+    
+    public void showTurns(){
+        System.out.println(name + " has " + turns + " turns left.");
+    }
+}

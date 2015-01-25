@@ -18,7 +18,7 @@ public class CIT260Team4Battleship {
        String description = "This is the battleship game. Enjoy!!";// a description of the game
        
     public static void main(String[] args) {
-        CIT260Team4Battleship game = new CIT260Team4Battleship(); // constructor - creates instance of class caled "game"
+        CIT260Team4Battleship game = new CIT260Team4Battleship(); // constructor - creates instance of class called "game"
         game.getName(); //calls the getName() method for the "game" instance of the class
         game.displayHelp(); //calls the getName() method for the "name" instance of the class
         
@@ -32,6 +32,10 @@ public class CIT260Team4Battleship {
         Gameplay gameplay = new Gameplay(); //instance creation for "Gameplay" class
         gameplay.playerTurn(); //calling playerTurn method in "Gameplay" class. 
         gameplay.ai_Turn(); //calling ai_Turn method in "Gameplay" class. 
+        
+        AI ai = new AI(); //instance creation for "AI" class
+        ai.showTurns(); //calling showTurn method for "AI" class.
+        
     }
         public void getName(){
             Scanner input = new Scanner(System.in);   // gets input using scanner and puts it into variable firstName

@@ -48,6 +48,7 @@ public class CIT260Team4Battleship {
         public void playerMove(){
             
         }
+        Menu();//instance creation for Menu class
     }
     
 

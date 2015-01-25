@@ -37,7 +37,7 @@ public class CIT260Team4Battleship {
         ai.showTurns(); //calling showTurn method for "AI" class.
         
         Settings settings = new Settings();     //instance creation for "Settings class"
-        Settings.showDifficulty();              //calling method showDifficulty to display current setting
+        settings.showDifficulty();              //calling method showDifficulty to display current setting
         
     }
         public void getName(){

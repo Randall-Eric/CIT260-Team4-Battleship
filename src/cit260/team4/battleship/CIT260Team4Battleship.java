@@ -36,6 +36,9 @@ public class CIT260Team4Battleship {
         AI ai = new AI(); //instance creation for "AI" class
         ai.showTurns(); //calling showTurn method for "AI" class.
         
+        Settings settings = new Settings();     //instance creation for "Settings class"
+        Settings.showDifficulty();              //calling method showDifficulty to display current setting
+        
     }
         public void getName(){
             Scanner input = new Scanner(System.in);   // gets input using scanner and puts it into variable firstName

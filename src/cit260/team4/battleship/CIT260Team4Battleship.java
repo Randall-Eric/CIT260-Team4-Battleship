@@ -46,7 +46,7 @@ public class CIT260Team4Battleship {
             this.firstName = input.next();
         }
         public void displayHelp() {
-            System.out.println("Welcome, " + this.firstName ); //displays welcome message and description
+            System.out.println("Welcome, " + this.firstName + "!"); //displays welcome message and description
             System.out.println(this.description);
         }
         public void startGame(){

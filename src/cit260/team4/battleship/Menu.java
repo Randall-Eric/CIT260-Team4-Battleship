@@ -10,13 +10,14 @@ package cit260.team4.battleship;
  * @author rebecca thayne
  */
 public class Menu {
-  String startGame ="New Game"
-  String howToPlay = "How to Play"
-  String quitGame = "Quit Game"
+  String startGame="New Game";
+  String howToPlay="How to Play";
+  String quitGame="Quit Game";
           
-  public void welcome()
-          system.out.println("Welcome to Battleship")
-  public void thankYou()
-          system.out.println("Thank you for playing Battleship")
-          
+  public void welcome(){
+          System.out.println("Welcome to Battleship");
+                  }  
+  public void thankYou(){
+          System.out.println("Thank you for playing Battleship");
+                  }
 }

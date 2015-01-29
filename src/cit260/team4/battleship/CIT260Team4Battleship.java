@@ -30,15 +30,15 @@ public class CIT260Team4Battleship {
         ScoreBoard ScoreBoard = new ScoreBoard(); //instance creation for "ScoreBoard" class
         ScoreBoard.showHighScore(); //calling methods in "ScoreBoard" class
         
+        Settings settings = new Settings();     //instance creation for "Settings class"
+        settings.showDifficulty();              //calling method showDifficulty to display current setting
+        
         Gameplay gameplay = new Gameplay(); //instance creation for "Gameplay" class
         gameplay.hitOrMiss();
         System.out.println(gameplay.returnOutput);
         
         AI ai = new AI(); //instance creation for "AI" class
         ai.showTurns(); //calling showTurn method for "AI" class.
-        
-        Settings settings = new Settings();     //instance creation for "Settings class"
-        settings.showDifficulty();              //calling method showDifficulty to display current setting
         
     }
         public void getName(){

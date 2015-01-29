@@ -27,7 +27,8 @@ public class Gameplay {
         int row = (int)rowFloat;
         
         
-        if (column.equals("A") || column.equals("B") || column.equals("C") || column.equals("D") || column.equals("E") || column.equals("F") || column.equals("G") || column.equals("H") || column.equals("I") ||column.equals("J")){
+        if (column.equals("A") || column.equals("B") || column.equals("C") || column.equals("D") || column.equals("E") 
+            || column.equals("F") || column.equals("G") || column.equals("H") || column.equals("I") ||column.equals("J")){
         //inside bounds
             if (row <=10 && row >= 1){
                 if(column.equals(shipColumn) && row == shipRow){

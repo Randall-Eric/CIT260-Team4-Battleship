@@ -11,13 +11,20 @@ package cit260.team4.battleship;
  */
 public class ScoreBoard {
     int highscore = 158;
-      
-    
+    int hitPoint = 5; 
+    int newTotalScore;
   
     
     public void showHighScore(){
         System.out.println("Your high score is: " + highscore);
 }
+    
+        public void addHitScore(){
+   
+                newTotalScore = hitPoint + highscore;
+                System.out.println("Plus " + hitPoint + " Points. Your new high score is "+ highscore);
+                }
+
     
 }
 

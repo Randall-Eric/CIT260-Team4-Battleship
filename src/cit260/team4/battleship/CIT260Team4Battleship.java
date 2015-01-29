@@ -16,6 +16,7 @@ public class CIT260Team4Battleship {
        
        String firstName;//enter player first name
        String description = "This is the battleship game. Enjoy!!";// a description of the game
+      
        
     public static void main(String[] args) {
         CIT260Team4Battleship game = new CIT260Team4Battleship(); // constructor - creates instance of class called "game"
@@ -30,8 +31,8 @@ public class CIT260Team4Battleship {
         ScoreBoard.showHighScore(); //calling methods in "ScoreBoard" class
         
         Gameplay gameplay = new Gameplay(); //instance creation for "Gameplay" class
-        gameplay.playerTurn(); //calling playerTurn method in "Gameplay" class. 
-        gameplay.ai_Turn(); //calling ai_Turn method in "Gameplay" class. 
+        gameplay.hitOrMiss();
+        System.out.println(gameplay.returnOutput);
         
         AI ai = new AI(); //instance creation for "AI" class
         ai.showTurns(); //calling showTurn method for "AI" class.

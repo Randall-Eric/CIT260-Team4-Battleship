@@ -22,7 +22,7 @@ public class ScoreBoard {
         public void addHitScore(){
    
                 newTotalScore = hitPoint + highscore;
-                System.out.println("Plus " + hitPoint + " Points. Your new high score is "+ highscore);
+                System.out.println("Plus " + hitPoint + " Points. Your new high score is "+ newTotalScore);
                 }
 
     

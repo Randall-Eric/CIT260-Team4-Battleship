@@ -23,7 +23,7 @@ public class ScoreBoard {
         
     
     public void scoreStats (){
-        int sum = 0, hitPoint = 5, userhighscore = 145, totalPointsPossible = 0;
+        int sum = 0, hitPoint = 5, userhighscore = 125, totalPointsPossible = 0;
         int ships;
         float s;
         ships = 5;
@@ -36,10 +36,11 @@ public class ScoreBoard {
         System.out.println("You made a hit! \n Plus " + hitPoint + " points! Your new total score is " + sum + " There are " + totalPointsPossible + " points possible on in this game.");
     
         if (highscore < sum ){
-            System.out.println("Congrats on the new High Score!");
+            highscore = sum;
+            System.out.println("Congrats on the new High Score of " + highscore);
         }
         else{
-            System.out.println("\b You haven't broken the High Score yet!");
+            System.out.println("\b You haven't broken the High Score of " + highscore + " yet!");
     }
 }
 }

@@ -13,6 +13,7 @@ import java.util.Scanner;
  */
 public class Gameplay {
     String returnOutput;
+    String playerTurnOutput;
     String column;
     float rowFloat;
     String shipColumn = "A";
@@ -33,7 +34,7 @@ public class Gameplay {
             if (row <=10 && row >= 1){
                 if(column.equals(shipColumn) && row == shipRow){
                     returnOutput = "Hit!";
-                    return true;
+                    return false;
                 }
             
             else 
@@ -44,8 +45,19 @@ public class Gameplay {
         else
             returnOutput="Invalid Input";
             System.out.println("\t Invalid \n Input");
-        return false;
+        return true;
             }
+    public void playerTurn (){
+        
+        int x = 1;
+        
+        do{
+            System.out.print("Player 1's score: " + x);
+            x++;
+            System.out.print("\n);");
+        }while (x < 20); 
+        playerTurnOutput="It is now the computers turn!"; 
     
+}
 }
 

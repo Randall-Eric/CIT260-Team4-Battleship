@@ -29,7 +29,7 @@ public class CIT260Team4Battleship {
         
         ScoreBoard ScoreBoard = new ScoreBoard(); //instance creation for "ScoreBoard" class
         ScoreBoard.showHighScore(); //calling methods in "ScoreBoard" class
-        ScoreBoard.addHitScore();
+        ScoreBoard.scoreStats();
         
         Settings settings = new Settings();     //instance creation for "Settings class"
         settings.showDifficulty();              //calling method showDifficulty to display current setting

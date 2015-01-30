@@ -22,7 +22,7 @@ public class ScoreBoard {
       
         
     
-    public void addHitScore (){
+    public void scoreStats (){
         int sum = 0, hitPoint = 5, userhighscore = 145, totalPointsPossible = 0;
         int ships;
         float s;

@@ -11,29 +11,35 @@ package cit260.team4.battleship;
  */
 public class ScoreBoard {
     int highscore = 155;
-    int hitPoint = 5; 
-    int newTotalScore = 0;
+     
+    
     
     
     public void showHighScore(){
-        System.out.println("Your high score is: " + highscore);
+        System.out.println("The high score for this game is: " + highscore);
 }
    
       
-        public void addHitScore(){
-   
-                newTotalScore = hitPoint + highscore;
-                if (newTotalScore < 0){
-                	System.out.println("Your score is 0.");
-                if (newTotalScore == 0){
-                	System.out.println("Your score is 0.");
-                if (newTotalScore > 1){
-                	System.out.println("/t Plus " + hitPoint + " Points. /n Your new high score is "+ newTotalScore);	
-                
-          	    }
-                }
-                }
-	}
+        
     
+    public void addHitScore (){
+        int sum = 0, hitPoint = 5, userhighscore = 145, totalPointsPossible = 0;
+        int ships;
+        float s;
+        ships = 5;
+        s = ships;
+ 
+        
+        totalPointsPossible = ships * hitPoint;
+        sum = hitPoint + userhighscore;
+ 
+        System.out.println("You made a hit! \n Plus " + hitPoint + " points! Your new total score is " + sum + " There are " + totalPointsPossible + " points possible on in this game.");
+    
+        if (highscore < sum ){
+            System.out.println("Congrats on the new High Score!");
+        }
+        else{
+            System.out.println("\b You haven't broken the High Score yet!");
+    }
 }
-
+}

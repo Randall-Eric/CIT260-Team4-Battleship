@@ -51,6 +51,7 @@ public class Gameplay {
                 
                 else if (column.equals(patrolBoat) && row == patrolHit){ //embedded else if statment that checks for Patrol boat hits
                     returnOutput = "Hit - Patrol Boat!";
+                    
                     do{//do\while statment that give the player a score for amount of spaces hit for Patrol boat. 
                        //When array is finished, it will be one point per hit.
                         System.out.print("Player 1's score: " + x + " ");
@@ -58,6 +59,7 @@ public class Gameplay {
                         x++;
                             }while (x <= 2); 
                 }
+                
             else 
                 returnOutput = "Miss!";
                 return false;

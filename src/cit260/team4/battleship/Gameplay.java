@@ -46,9 +46,9 @@ public class Gameplay {
                         System.out.print("\n);");
                         x++;
                             }while (x <= 5); 
-
+                    playerTurnOutput="It is now the computers turn!";
+                    return true;
                     
-        playerTurnOutput="It is now the computers turn!";
                 }
                 
                 else if (column.equals(patrolBoat) && row == patrolHit){ //embedded else if statment that checks for Patrol boat hits
@@ -62,7 +62,7 @@ public class Gameplay {
                             }while (x <= 2); 
                 return true;
                 }
-       
+                
             else 
                 returnOutput = "Miss!";
                 return false;
@@ -73,5 +73,6 @@ public class Gameplay {
             System.out.println("\t Invalid \n Input");
         return false;
             }
-
+    
 }
+

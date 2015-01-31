@@ -37,8 +37,6 @@ public class CIT260Team4Battleship {
         Gameplay gameplay = new Gameplay(); //instance creation for "Gameplay" class
         gameplay.hitOrMiss();
         System.out.println(gameplay.returnOutput);
-        gameplay.playerTurn(); 
-        System.out.println(gameplay.playerTurnOutput);
         
         AI ai = new AI(); //instance creation for "AI" class
         ai.showTurns(); //calling showTurn method for "AI" class.

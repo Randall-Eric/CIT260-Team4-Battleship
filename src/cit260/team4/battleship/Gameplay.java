@@ -38,6 +38,7 @@ public class Gameplay {
             if (row <=10 && row >= 1){ //embedded if statement that checks for Aircraft carrier hits
                 if(column.equals(aircraftCarrier) && row == aircraftHit){
                     returnOutput = "Hit - Aircraft carrier!";
+                    
                 
                     do{//do\while statment that give the player a score for amount of spaces hit for Aircraft carrier. 
                        //When array is finished, it will be one point per hit. 
@@ -45,6 +46,7 @@ public class Gameplay {
                         System.out.print("\n);");
                         x++;
                             }while (x <= 5); 
+
                     
         playerTurnOutput="It is now the computers turn!";
                 }
@@ -58,8 +60,9 @@ public class Gameplay {
                         System.out.print("\n);");
                         x++;
                             }while (x <= 2); 
+                return true;
                 }
-                
+       
             else 
                 returnOutput = "Miss!";
                 return false;
@@ -68,7 +71,7 @@ public class Gameplay {
         else
             returnOutput="Invalid Input";
             System.out.println("\t Invalid \n Input");
-        return true;
+        return false;
             }
 
 }

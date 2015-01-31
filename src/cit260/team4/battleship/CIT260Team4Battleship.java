@@ -32,7 +32,7 @@ public class CIT260Team4Battleship {
         ScoreBoard.scoreStats();
         
         Settings settings = new Settings();     //instance creation for "Settings class"
-        settings.showDifficulty();              //calling method showDifficulty to display current setting
+        settings.selectDifficulty();            //calling method showDifficulty to display current setting
         
         Gameplay gameplay = new Gameplay(); //instance creation for "Gameplay" class
         gameplay.hitOrMiss();

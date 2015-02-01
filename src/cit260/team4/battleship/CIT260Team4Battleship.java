@@ -26,6 +26,7 @@ public class CIT260Team4Battleship {
         Ships ship = new Ships(); //instance creation for "Ships" class
         ship.showName(); //calling methods in "Ships" class
         ship.showSize();
+        ship.getAccuracy(5, 10);
         
         ScoreBoard ScoreBoard = new ScoreBoard(); //instance creation for "ScoreBoard" class
         ScoreBoard.showHighScore(); //calling methods in "ScoreBoard" class

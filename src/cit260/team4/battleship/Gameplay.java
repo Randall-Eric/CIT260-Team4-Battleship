@@ -74,6 +74,17 @@ public class Gameplay {
         return false;
             }
 
-    
+  public String isSunk(int hitsPossible, int hitsTaken){
+     float hitsRemaining = hitsPossible - hitsTaken;
+     int hitsLeft = (int)hitsRemaining;
+     if (hitsLeft == 0){
+         return "Ship is sunk!\n\r";
+     }
+     else if (hitsLeft < 0){
+         return "Error\n\r";
+     }
+     
+     return "Ship has " + hitsLeft + " hits remaining.\n\r";
+  }  
 }
 

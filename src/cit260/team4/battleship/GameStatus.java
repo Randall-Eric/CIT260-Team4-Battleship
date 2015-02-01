@@ -25,7 +25,7 @@ public class GameStatus {
         int userInput=(int)userInputFloat;
         
         if(userInput>0) {
-            hit=hit+1;
+            hit++;
             spotsLeft=(int) (totalSpots-hit);
             outPutSpaces="You have "+ spotsLeft + " spaces left to find and hit to WIN!";
              

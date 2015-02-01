@@ -27,15 +27,17 @@ public class GameStatus {
         if(userInput>0) {
             hit=hit+1;
             spotsLeft=(int) (totalSpots-hit);
-            outPutSpaces="You have "+ spotsLeft + "left to find and hit to WIN!";
-            
-            if(userInput<=0){
-            outPutSpaces="Please move on to your next turn.";    
+            outPutSpaces="You have "+ spotsLeft + " spaces left to find and hit to WIN!";
+             
                 
             } 
-            else 
+            else if(userInput<=0){
+            outPutSpaces="Please move on to your next turn."; 
+            }
+        else 
                 outPutSpaces="Sorry! Invalid Input";
-            System.out.println("Sorry!\t Invalid \n Input");
+            System.out.println("Sorry!\t Invalid \n Input");    
         }
-}
-}
+
+            
+    }

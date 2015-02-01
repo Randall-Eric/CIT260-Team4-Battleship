@@ -26,13 +26,14 @@ public class CIT260Team4Battleship {
         Ships ship = new Ships(); //instance creation for "Ships" class
         ship.showName(); //calling methods in "Ships" class
         ship.showSize();
+        ship.getAccuracy(5, 10);
         
         ScoreBoard ScoreBoard = new ScoreBoard(); //instance creation for "ScoreBoard" class
         ScoreBoard.showHighScore(); //calling methods in "ScoreBoard" class
         ScoreBoard.scoreStats();
         
         Settings settings = new Settings();     //instance creation for "Settings class"
-        settings.showDifficulty();              //calling method showDifficulty to display current setting
+        settings.selectDifficulty();            //calling method showDifficulty to display current setting
         
         Gameplay gameplay = new Gameplay(); //instance creation for "Gameplay" class
         gameplay.hitOrMiss();
@@ -41,7 +42,12 @@ public class CIT260Team4Battleship {
         AI ai = new AI(); //instance creation for "AI" class
         ai.aiTurn(); //calling showTurn method for "AI" class.
         System.out.println(ai.turnPhrase);
+        
+        GameStatus gamestatus = new GameStatus();
+        gamestatus.spacesLeft();
+        System.out.println(gamestatus.outPutSpaces);
     }
+    
         public void getName(){
             Scanner input = new Scanner(System.in);   // gets input using scanner and puts it into variable firstName
             System.out.println("What is your name?");

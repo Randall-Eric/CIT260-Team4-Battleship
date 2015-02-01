@@ -41,7 +41,12 @@ public class CIT260Team4Battleship {
         AI ai = new AI(); //instance creation for "AI" class
         ai.aiTurn(); //calling showTurn method for "AI" class.
         System.out.println(ai.turnPhrase);
+        
+        GameStatus gamestatus = new GameStatus();
+        gamestatus.spacesLeft();
+        System.out.println(gamestatus.outPutSpaces);
     }
+    
         public void getName(){
             Scanner input = new Scanner(System.in);   // gets input using scanner and puts it into variable firstName
             System.out.println("What is your name?");

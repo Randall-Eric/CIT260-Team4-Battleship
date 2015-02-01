@@ -57,7 +57,7 @@ public class Gameplay {
                     do{//do\while statment that give the player a score for amount of spaces hit for Patrol boat. 
                        //When array is finished, it will be one point per hit.
                         System.out.print("Player 1's score: " + x + " ");
-                        System.out.print("\n);");
+                        System.out.print("\n\r);");
                         x++;
                             }while (x <= 2); 
                 return true;

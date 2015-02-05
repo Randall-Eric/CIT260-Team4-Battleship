@@ -88,7 +88,7 @@ public class Gameplay {
      return "Ship has " + hitsLeft + " hits remaining.\n\r";
   }  
 
-  public static String [][] gameExit = {//sets up the Main Menu Choices after putting name in. 
+  public static String [][] gameExit = {//sets up the exit option.  
         {"X", "Exit"}
     };
   
@@ -105,11 +105,11 @@ public class Gameplay {
                         case "X":  //breaks from the Gameplay class. 
                         break;
                     default:
-                        System.out.println("Invalid Choice. Please select another option.");  //pints out an error when one of the above listed options is not selected. 
+                        System.out.println("Invalid Choice. Please select another option.");  //pints out an error when anything but x is selected.
                         break;
         }
         } 
-            while (!command.equals("X")); //continues to run the main menu until X is selected to end it. 
+            while (!command.equals("X")); //continues to run until X is selected to end it. 
                 return;
     }
 

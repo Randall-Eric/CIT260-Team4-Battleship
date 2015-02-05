@@ -85,6 +85,7 @@ public class CIT260Team4Battleship {
                         break;
                     case "D":
                         this.ScoreBoard.showHighScore(); //calls the showHighScore function from the ScoreBoard class.
+                        this.ScoreBoard.scoreStats(); //calls the showStats function from the ScoreBoard class.
                         break; 
                     case "S":
                         this.Settings.selectDifficulty(); //calls the selectDifficulty function from the Settings class.

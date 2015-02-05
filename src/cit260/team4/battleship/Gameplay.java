@@ -25,6 +25,7 @@ public class Gameplay {
 
     
     public boolean hitOrMiss() {
+        
         Scanner input = new Scanner(System.in);
         System.out.println("Enter the column: ");
         column = input.next();
@@ -32,6 +33,7 @@ public class Gameplay {
         rowFloat = input.nextFloat();
         int row = (int)rowFloat;
         
+
         if (column.equals("A") || column.equals("B") || column.equals("C") || column.equals("D") || column.equals("E") 
             || column.equals("F") || column.equals("G") || column.equals("H") || column.equals("I") ||column.equals("J")){ //inside bounds
             
@@ -68,12 +70,11 @@ public class Gameplay {
                 return false;
             }
         }
-        else
-            returnOutput="Invalid Input";
-            System.out.println("\t Invalid \n Input");
+            else
+                returnOutput="Invalid Input";
+                System.out.println("\t Invalid \n Input");
         return false;
-            }
-
+    }
   public String isSunk(int hitsPossible, int hitsTaken){
      float hitsRemaining = hitsPossible - hitsTaken;
      int hitsLeft = (int)hitsRemaining;
@@ -86,5 +87,39 @@ public class Gameplay {
      
      return "Ship has " + hitsLeft + " hits remaining.\n\r";
   }  
+
+  public static String [][] gameExit = {//sets up the Main Menu Choices after putting name in. 
+        {"X", "Exit"}
+    };
+  
+  public void gameExit(){  
+    String command;
+            Scanner inFile = new Scanner(System.in);
+    do{
+                this.exit();
+                
+                command = inFile.nextLine();
+                command = command.trim().toUpperCase(); //changes input to always be lowercase, in case someone inputs a uppercase letter. 
+                
+                switch (command) {
+                        case "X":  //breaks from the Gameplay class. 
+                        break;
+                    default:
+                        System.out.println("Invalid Choice. Please select another option.");  //pints out an error when one of the above listed options is not selected. 
+                        break;
+        }
+        } 
+            while (!command.equals("X")); //continues to run the main menu until X is selected to end it. 
+                return;
+    }
+
+public void exit (){
+        System.out.println("\n\t************************************************************"); //decoration. 
+        
+        for (int i = 0; i < Gameplay.gameExit.length; i++){
+            System.out.println("\t  " + gameExit[i][0] + "\t" + gameExit[i][1]);
+        }
+        System.out.println("\t************************************************************\n");
+    }
 }
 

@@ -82,6 +82,7 @@ public class CIT260Team4Battleship {
                         break;
                     case "G":
                         this.Gameplay.hitOrMiss(); //calls the hitOrMiss function from the Gameplay class.
+                        this.Gameplay.gameExit(); //calls the gameExit function from the Gameplay class.
                         break;
                     case "D":
                         this.ScoreBoard.showHighScore(); //calls the showHighScore function from the ScoreBoard class.

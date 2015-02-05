@@ -99,7 +99,7 @@ public class Gameplay {
                 this.exit();
                 
                 command = inFile.nextLine();
-                command = command.trim().toUpperCase(); //changes input to always be lowercase, in case someone inputs a uppercase letter. 
+                command = command.trim().toUpperCase(); //changes input to always be uppercase, in case someone inputs a lowercase letter. 
                 
                 switch (command) {
                         case "X":  //breaks from the Gameplay class. 

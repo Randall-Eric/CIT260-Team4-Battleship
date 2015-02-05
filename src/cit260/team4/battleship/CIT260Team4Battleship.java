@@ -23,6 +23,9 @@ public class CIT260Team4Battleship {
         game.getName(); //calls the getName() method for the "game" instance of the class
         game.displayHelp(); //calls the getName() method for the "name" instance of the class
         
+        HelpMenuView helpMenuView=new HelpMenuView();
+        helpMenuView.helpInput();
+              
         Ships ship = new Ships(); //instance creation for "Ships" class
         ship.showName(); //calling methods in "Ships" class
         ship.showSize();

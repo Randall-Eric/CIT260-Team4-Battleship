@@ -22,6 +22,10 @@ public class HelpMenuView {
     
     private HelpMenuControl helpMenuControl = new HelpMenuControl();
     
+    public HelpMenuView(){
+        
+    }
+    
     public void helpInput(){
         
             String command;
@@ -46,7 +50,7 @@ public class HelpMenuView {
                     case "X":
                         break;
                     default:
-                        new HelpError().displayError("Invalid Chorice. Please select another option.");
+                        System.out.println("Invalid Choice. Please select another option.");
                         continue;
                 }
             } 
@@ -58,7 +62,7 @@ public class HelpMenuView {
         System.out.println("\n\t************************************************************");
         System.out.println("\tEnter the letter for your selection from the help menu:");
         
-        for (int 1 = 0; i < HelpMenuView.menuItems.length; i++){
+        for (int i = 0; i < HelpMenuView.menuItems.length; i++){
             System.out.println("\t  " + menuItems[i][0] + "\t" + menuItems[i][1]);
         }
         System.out.println("\t************************************************************\n");

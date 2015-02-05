@@ -6,6 +6,7 @@
 package cit260.team4.battleship;
 
 import java.util.Scanner;
+import java.awt.Color; 
 
 /**
  *

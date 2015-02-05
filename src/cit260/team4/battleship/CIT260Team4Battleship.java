@@ -34,17 +34,11 @@ public class CIT260Team4Battleship {
             System.out.println("Welcome, " + this.firstName + "!"); //displays welcome message and description
             System.out.println(this.description);
         }
-        public void startGame(){
-            
-        }
-        public void playerMove(){
-            
-        }
         Menu menu= new Menu();//instance creation for Menu class
 
 
     
-        private final static String [][] mainMenuItems = {
+        private final static String [][] mainMenuItems = {//sets up the Main Menu Choices after putting name in. 
         {"A", "AI Turn"},
         {"B", "Browse Ships"},    
         {"G", "Play Game"},
@@ -55,18 +49,18 @@ public class CIT260Team4Battleship {
     };
     
     
-    private final AI AI = new AI(); 
-    private final Ships Ships = new Ships(); 
-    private final Gameplay Gameplay = new Gameplay(); 
-    private final ScoreBoard ScoreBoard = new ScoreBoard();
-    private final Settings Settings = new Settings();
-    private final HelpMenuView HelpMenuView = new HelpMenuView();
+    private final AI AI = new AI();                                 //calls the AI class. 
+    private final Ships Ships = new Ships();                        //calls the Ships class. 
+    private final Gameplay Gameplay = new Gameplay();               //calls the Gameplay class. 
+    private final ScoreBoard ScoreBoard = new ScoreBoard();         //calls the ScoreBoard class. 
+    private final Settings Settings = new Settings();               //calls the Settings class. 
+    private final HelpMenuView HelpMenuView = new HelpMenuView();   //calls the HelpMenuView class. 
     
     public CIT260Team4Battleship(){
         
     }
     
-    public void mainMenuInput(){
+    public void mainMenuInput(){ //runs the corresponding letter choices listed in the String choices above.
         
             String command;
             Scanner inFile = new Scanner(System.in);
@@ -75,43 +69,43 @@ public class CIT260Team4Battleship {
                 this.display();
                 
                 command = inFile.nextLine();
-                command = command.trim().toUpperCase();
+                command = command.trim().toUpperCase(); //changes input to always be uppercase, in case someone inputs a lowercase letter. 
                 
                 switch (command){
                     case "A":
-                        this.AI.aiTurn();
+                        this.AI.aiTurn(); //calls the aiTurn function from the AI class.
                         break;
                     case "B":
-                        this.Ships.showName();
-                        this.Ships.showSize();
-                        this.Ships.getAccuracy(5, 10);
+                        this.Ships.showName();  //calls the showName function from the Ships class.
+                        this.Ships.showSize();  //calls the showSize function from the Ships class.
+                        this.Ships.getAccuracy(5, 10);  //calls the getAccuracy function from the Ships class.
                         break;
                     case "G":
-                        this.Gameplay.hitOrMiss();
+                        this.Gameplay.hitOrMiss(); //calls the hitOrMiss function from the Gameplay class.
                         break;
                     case "D":
-                        this.ScoreBoard.showHighScore();
+                        this.ScoreBoard.showHighScore(); //calls the showHighScore function from the ScoreBoard class.
                         break; 
                     case "S":
-                        this.Settings.selectDifficulty();
+                        this.Settings.selectDifficulty(); //calls the selectDifficulty function from the Settings class.
                         break;
                     case ("H"):
-                        this.HelpMenuView.helpInput();
+                        this.HelpMenuView.helpInput(); //calls the helpInput function from the HelpMenuView class.
                         break;
-                    case "X":
+                    case "X":  //breaks from the options menu. 
                         break;
                     default:
-                        System.out.println("Invalid Choice. Please select another option.");
+                        System.out.println("Invalid Choice. Please select another option.");  //pints out an error when one of the above listed options is not selected. 
                         continue;
                 }
             } 
-            while (!command.equals("X"));
+            while (!command.equals("X")); //continues to run the main menu until X is selected to end it. 
                 return;
     }
         
     public final void display (){
-        System.out.println("\n\t************************************************************");
-        System.out.println("\tEnter the letter for your selection from the help menu:");
+        System.out.println("\n\t************************************************************"); //decoration. 
+        System.out.println("\tEnter the letter for your selection from the help menu:"); //simple output message. 
         
         for (int i = 0; i < CIT260Team4Battleship.mainMenuItems.length; i++){
             System.out.println("\t  " + mainMenuItems[i][0] + "\t" + mainMenuItems[i][1]);

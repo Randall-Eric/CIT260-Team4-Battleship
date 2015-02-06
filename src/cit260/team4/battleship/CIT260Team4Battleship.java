@@ -52,6 +52,7 @@ public class CIT260Team4Battleship {
     
     private final AI AI = new AI();                                 //calls the AI class. 
     private final Ships Ships = new Ships();                        //calls the Ships class. 
+    private final ShipMenu shipMenu = new ShipMenu();
     private final Gameplay Gameplay = new Gameplay();               //calls the Gameplay class. 
     private final ScoreBoard ScoreBoard = new ScoreBoard();         //calls the ScoreBoard class. 
     private final Settings Settings = new Settings();               //calls the Settings class. 
@@ -77,9 +78,11 @@ public class CIT260Team4Battleship {
                         this.AI.aiTurn(); //calls the aiTurn function from the AI class.
                         break;
                     case "B":
-                        this.Ships.showName();  //calls the showName function from the Ships class.
-                        this.Ships.showSize();  //calls the showSize function from the Ships class.
-                        this.Ships.getAccuracy(5, 10);  //calls the getAccuracy function from the Ships class.
+                       this.Ships.shipInput();
+                        //shipMenu.ShipMenu();
+                       //this.Ships.showName();  //calls the showName function from the Ships class.
+                       // this.Ships.showSize();  //calls the showSize function from the Ships class.
+                       // this.Ships.getAccuracy(5, 10);  //calls the getAccuracy function from the Ships class.
                         break;
                     case "G":
                         this.Gameplay.hitOrMiss(); //calls the hitOrMiss function from the Gameplay class.

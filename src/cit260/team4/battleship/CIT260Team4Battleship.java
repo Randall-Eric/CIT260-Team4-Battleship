@@ -22,7 +22,8 @@ public class CIT260Team4Battleship {
         CIT260Team4Battleship game = new CIT260Team4Battleship(); // constructor - creates instance of class called "game"
         game.getName(); //calls the getName() method for the "game" instance of the class
         game.displayHelp(); //calls the getName() method for the "name" instance of the class
-        game.mainMenuInput();
+        //game.mainMenuInput();
+        game.displayMain();
 
     }
         
@@ -35,11 +36,14 @@ public class CIT260Team4Battleship {
             System.out.println("Welcome, " + this.firstName + "!"); //displays welcome message and description
             System.out.println(this.description);
         }
-        Menu menu= new Menu();//instance creation for Menu class
+        MainMenuView menu= new MainMenuView();//instance creation for MainMenuView class
 
-
+ public void displayMain(){
+              MainMenuView mainMenu = new MainMenuView();
+        mainMenu.mainMenuInput();
+ }
     
-        private final static String [][] mainMenuItems = {//sets up the Main Menu Choices after putting name in. 
+        private final static String [][] mainMenuItems = {//sets up the Main MainMenuView Choices after putting name in. 
         {"A", "AI Turn"},
         {"B", "Browse Ships"},    
         {"G", "Play Game"},

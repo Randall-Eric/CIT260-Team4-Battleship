@@ -23,6 +23,7 @@ public class CIT260Team4Battleship {
         game.getName(); //calls the getName() method for the "game" instance of the class
         game.displayHelp(); //calls the getName() method for the "name" instance of the class
         //game.mainMenuInput();
+        game.mainMenuInput();
         game.displayMain();
 
     }
@@ -36,12 +37,15 @@ public class CIT260Team4Battleship {
             System.out.println("Welcome, " + this.firstName + "!"); //displays welcome message and description
             System.out.println(this.description);
         }
+       
         MainMenuView menu= new MainMenuView();//instance creation for MainMenuView class
-
+      
+                              
  public void displayMain(){
               MainMenuView mainMenu = new MainMenuView();
         mainMenu.mainMenuInput();
  }
+        
     
         private final static String [][] mainMenuItems = {//sets up the Main MainMenuView Choices after putting name in. 
         {"A", "AI Turn"},
@@ -59,6 +63,7 @@ public class CIT260Team4Battleship {
     private final ShipMenu shipMenu = new ShipMenu();
     private final Gameplay Gameplay = new Gameplay();               //calls the Gameplay class. 
     private final ScoreBoard ScoreBoard = new ScoreBoard();         //calls the ScoreBoard class. 
+    private final ScoreBoardMenuView ScoreBoardMenuView = new ScoreBoardMenuView(); //calls the ScoreBoardMenuView class.
     private final Settings Settings = new Settings();               //calls the Settings class. 
     private final HelpMenuView HelpMenuView = new HelpMenuView();   //calls the HelpMenuView class. 
     
@@ -93,6 +98,7 @@ public class CIT260Team4Battleship {
                         this.Gameplay.gameExit(); //calls the gameExit function from the Gameplay class.
                         break;
                     case "D":
+                        this.ScoreBoardMenuView.scoreBoardMenuInput();
                         this.ScoreBoard.showHighScore(); //calls the showHighScore function from the ScoreBoard class.
                         this.ScoreBoard.scoreStats(); //calls the showStats function from the ScoreBoard class.
                         break; 

@@ -19,7 +19,7 @@ class AuthorCreditControl {
         System.out.println();
         this.displayHelpBorder();
         System.out.println(
-                "Matthew Sweeney is a real cool guy. He helped with the AI, so if you lose you can blame him.\n"
+                "\tMatthew Sweeney is a real cool guy. He helped with the AI, so if you lose you can blame him.\n\t"
                         + "He hails from Austin, TX.");
         displayHelpBorder();
     }
@@ -28,7 +28,7 @@ class AuthorCreditControl {
         System.out.println();
         this.displayHelpBorder();
         System.out.println(
-                "Eric Randall: coder, athelete, gentleman.\n"
+                "\tEric Randall: coder, athelete, gentleman.\n\t"
                         + "Having tired of moding Minecraft, he decided to master Battleship.");
         displayHelpBorder();
     }
@@ -37,8 +37,8 @@ class AuthorCreditControl {
         System.out.println();
         this.displayHelpBorder();
         System.out.println(
-                "Christian Ray, Master Programer, is originally from Georgia, but currently lives in the icy reaches of Idaho.\n"
-                        + "He is also an expert in Apple tech support.");
+                "\tChristian Ray, Master Programer, is originally from Georgia, but currently lives in the icy reaches of Idaho.\n"
+                        + "\tHe is also an expert in Apple tech support.");
         displayHelpBorder();
     }
     
@@ -46,8 +46,8 @@ class AuthorCreditControl {
         System.out.println();
         this.displayHelpBorder();
         System.out.println(
-                "Taylor Westmoreland is originally from Sin City - Las Vegas, NV.\n"
-                        + "Taylor is also an accounting major, which is why our Battleship game also doubles as a tax writeoff.");
+                "\tTaylor Westmoreland is originally from Sin City - Las Vegas, NV.\n\t"
+                        + "Taylor is also an accounting major, which is why our Battleship game also somehow doubles as a tax writeoff.");
         displayHelpBorder();
     }
     
@@ -55,8 +55,8 @@ class AuthorCreditControl {
         System.out.println();
         this.displayHelpBorder();
         System.out.println(
-                "Jordan Smith is one of the hottest new coders out of Blackfoot, ID, otherwise known as the Silicon Tundra.\n"
-                        + "Jordan already had a degree in Business and a thriving pastry business when he took up coding.");
+                "\tJordan Smith is one of the hottest new coders out of Blackfoot, ID, otherwise known as the Silicon Tundra.\n"
+                        + "\tJordan already had a degree in Business and a thriving pastry business when he took up coding.");
         displayHelpBorder();
     }
     
@@ -64,8 +64,8 @@ class AuthorCreditControl {
         System.out.println();
         this.displayHelpBorder();
         System.out.println(
-                "David Banks, aka the Cisco Kid, currently resides in Spring, TX.\n"
-                        + "He is an expert at all things networking.");
+                "\tDavid Banks, aka the Cisco Kid, currently resides in Spring, TX.\n"
+                        + "\tHe is an expert at all things networking.");
         displayHelpBorder();
     }
     
@@ -73,8 +73,8 @@ class AuthorCreditControl {
         System.out.println();
         this.displayHelpBorder();
         System.out.println(
-                "Rebecca Thayne currently lives in Texas.\n"
-                        + "I don't have much information for her because I couldn't find her getting to know you post. Sorry.");
+                "\tRebecca Thayne currently lives in Texas.\n"
+                        + "\tmI don't have much information for her because I couldn't find her getting to know you post. Sorry.");
         displayHelpBorder();
     }
     

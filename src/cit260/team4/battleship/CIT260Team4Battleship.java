@@ -64,7 +64,7 @@ public class CIT260Team4Battleship {
     private final Gameplay Gameplay = new Gameplay();               //calls the Gameplay class. 
     private final ScoreBoard ScoreBoard = new ScoreBoard();         //calls the ScoreBoard class. 
     private final ScoreBoardMenuView ScoreBoardMenuView = new ScoreBoardMenuView(); //calls the ScoreBoardMenuView class.
-    private final Settings Settings = new Settings();               //calls the Settings class. 
+    private final SettingsMenuView settingsMenuView = new SettingsMenuView();               //calls the Settings Menu class. 
     private final HelpMenuView HelpMenuView = new HelpMenuView();   //calls the HelpMenuView class. 
     
     public CIT260Team4Battleship(){
@@ -103,7 +103,7 @@ public class CIT260Team4Battleship {
                         this.ScoreBoard.scoreStats(); //calls the showStats function from the ScoreBoard class.
                         break; 
                     case "S":
-                        this.Settings.selectDifficulty(); //calls the selectDifficulty function from the Settings class.
+                        this.settingsMenuView.settingsInput(); //calls the SettingsMenuView class
                         break;
                     case ("H"):
                         this.HelpMenuView.helpInput(); //calls the helpInput function from the HelpMenuView class.

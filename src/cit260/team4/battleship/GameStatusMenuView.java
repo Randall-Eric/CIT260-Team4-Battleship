@@ -26,7 +26,7 @@ public class GameStatusMenuView {
         
     }
     
-    public void theInput(){
+    public void gameStatusInput(){
         
         String command;
         Scanner inFile = new Scanner(System.in);
@@ -57,8 +57,7 @@ public class GameStatusMenuView {
         while (!command.equals("X"));
         return
         
-    }
-    
+   } 
     public final void display(){
         System.out.println("\n\t************************************************************");
         System.out.println("\tEnter the letter associated with one of the following commands:");

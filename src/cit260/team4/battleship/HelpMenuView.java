@@ -17,10 +17,12 @@ public class HelpMenuView {
         {"R", "Rules"},
         {"O", "Objective"},
         {"D", "Difficulty"},
+        {"E", "Developers"},
         {"X", "Exit"}
     };
     
     private HelpMenuControl helpMenuControl = new HelpMenuControl();
+    private AuthorCreditView authorCreditView = new AuthorCreditView();
     
     public HelpMenuView(){
         
@@ -46,6 +48,9 @@ public class HelpMenuView {
                         break;
                     case "D":
                         this.helpMenuControl.displayDifficultyHelp();
+                        break;
+                    case "E":
+                        this.authorCreditView.authorInput();
                         break;
                     case "X":
                         break;

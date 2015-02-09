@@ -6,7 +6,6 @@
 package cit260.team4.battleship;
 
 import java.util.Scanner;
-import java.awt.Color; 
 
 /**
  *
@@ -114,19 +113,16 @@ public class CIT260Team4Battleship {
                         break;
                     default:
                         System.out.println("Invalid Choice. Please select another option.");  //pints out an error when one of the above listed options is not selected. 
-                        continue;
                 }
             } 
             while (!command.equals("X")); //continues to run the main menu until X is selected to end it. 
-                return;
     }
         
     public final void display (){
         System.out.println("\n\t************************************************************"); //decoration. 
         System.out.println("\tEnter the letter for your selection from the help menu:"); //simple output message. 
-        
-        for (int i = 0; i < CIT260Team4Battleship.mainMenuItems.length; i++){
-            System.out.println("\t  " + mainMenuItems[i][0] + "\t" + mainMenuItems[i][1]);
+        for (String[] mainMenuItem : CIT260Team4Battleship.mainMenuItems) {
+            System.out.println("\t  " + mainMenuItem[0] + "\t" + mainMenuItem[1]);
         }
         System.out.println("\t************************************************************\n");
     }

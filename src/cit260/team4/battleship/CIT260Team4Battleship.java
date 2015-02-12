@@ -66,6 +66,7 @@ public class CIT260Team4Battleship {
     private final ScoreBoardMenuView ScoreBoardMenuView = new ScoreBoardMenuView(); //calls the ScoreBoardMenuView class.
     private final SettingsMenuView settingsMenuView = new SettingsMenuView();               //calls the Settings Menu class. 
     private final HelpMenuView HelpMenuView = new HelpMenuView();   //calls the HelpMenuView class. 
+    private final ShipPlacement shipPlacement = new ShipPlacement();
     
     public CIT260Team4Battleship(){
         
@@ -94,8 +95,9 @@ public class CIT260Team4Battleship {
                        // this.Ships.getAccuracy(5, 10);  //calls the getAccuracy function from the Ships class.
                         break;
                     case "G":
-                        this.Gameplay.hitOrMiss(); //calls the hitOrMiss function from the Gameplay class.
-                        this.Gameplay.gameExit(); //calls the gameExit function from the Gameplay class.
+                        //this.Gameplay.hitOrMiss(); //calls the hitOrMiss function from the Gameplay class.
+                        //this.Gameplay.gameExit(); //calls the gameExit function from the Gameplay class.
+                        this.shipPlacement.shipPlacement();
                         break;
                     case "D":
                         this.ScoreBoardMenuView.scoreBoardMenuInput();

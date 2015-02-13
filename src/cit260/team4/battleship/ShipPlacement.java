@@ -32,6 +32,7 @@ public class ShipPlacement {
         row = input.nextInt();   
         System.out.println("What is the direction of the " + ships[i] + " (ex. up, down, left, right)");
         direction = input.next();
+        int extension = shipExtension(i);
     
             if (column.equals("A") || column.equals("B") || column.equals("C") || column.equals("D") || column.equals("E") 
             || column.equals("F") || column.equals("G") || column.equals("H") || column.equals("I") ||column.equals("J")){ 
@@ -47,5 +48,30 @@ public class ShipPlacement {
     }
     
     System.out.print("Ships placed. Get ready for the game!!!");
-}      
+}  
+    
+   public int shipExtension(int ship) {
+       
+       int ext;        
+               
+       switch(ship) {
+           case 0:
+               ext = 4;
+               break;
+           case 1:
+               ext = 3;
+               break;
+           case 2:
+               ext = 2;
+               break;
+           case 3:
+               ext = 2;
+               break;
+           default:
+               ext = 1;
+               break;
+       }
+        return ext;
+   } 
+    
 }

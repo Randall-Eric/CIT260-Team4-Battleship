@@ -32,10 +32,12 @@ public class ShipPlacement {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter the " + ships[i] + " start column: ");
         String columnLetter = input.next();
+        columnLetter = columnLetter.trim().toUpperCase();
         System.out.println("Enter the " + ships[i] + " start row: ");
         row = input.nextInt();   
         System.out.println("What is the direction of the " + ships[i] + " (ex. up, down, left, right)");
         direction = input.next();
+        
         int extension = shipExtension(i);
         column = columnValue(columnLetter);
     

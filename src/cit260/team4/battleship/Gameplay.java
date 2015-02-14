@@ -22,11 +22,11 @@ public class Gameplay {
     int aircraftHit = 1; //will be an array?
     int patrolHit = 4; //will also be an array?
     int x = 1;
-
     
     public boolean hitOrMiss() {
         
         Scanner input = new Scanner(System.in);
+        System.out.println("\n");
         System.out.println("Enter the column: ");
         column = input.next();
         System.out.println("Enter the row: ");
@@ -120,6 +120,22 @@ public void exit (){
             System.out.println("\t  " + gameExit[i][0] + "\t" + gameExit[i][1]);
         }
         System.out.println("\t************************************************************\n");
+    }
+
+    void playerNames() {
+        {
+      int [] numbers = {1, 2, 3, 4, 5, 6, 7};
+
+      for(int x : numbers ){
+         System.out.print( "Player " + x + "   " );
+      }
+      System.out.print("\n");
+      String [] names ={"Dave    ", "   Taylor   ", "  Rebecca  ", "  Eric     ","  Christian  ", "Jordan     ", "Matt   "};
+      for( String name : names ) {
+         System.out.print( name );
+
+      }
+   }
     }
 }
 

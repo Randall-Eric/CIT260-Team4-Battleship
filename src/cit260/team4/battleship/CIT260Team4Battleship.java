@@ -94,9 +94,10 @@ public class CIT260Team4Battleship {
                        // this.Ships.getAccuracy(5, 10);  //calls the getAccuracy function from the Ships class.
                         break;
                     case "G":
-                        //this.Gameplay.hitOrMiss(); //calls the hitOrMiss function from the Gameplay class.
-                        //this.Gameplay.gameExit(); //calls the gameExit function from the Gameplay class.
+                        this.Gameplay.playerNames(); 
                         this.shipPlacement.shipPlacement();
+                        this.Gameplay.hitOrMiss(); //calls the hitOrMiss function from the Gameplay class.
+                        this.Gameplay.gameExit(); //calls the gameExit function from the Gameplay class.
                         break;
                     case "D":
                         this.ScoreBoardMenuView.scoreBoardMenuInput();

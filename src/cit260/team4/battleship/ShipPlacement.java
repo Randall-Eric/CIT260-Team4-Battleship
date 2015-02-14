@@ -30,6 +30,7 @@ public class ShipPlacement {
     while (i < 5) {   
         
         Scanner input = new Scanner(System.in);
+        System.out.println("\n");
         System.out.println("Enter the " + ships[i] + " start column: ");
         String columnLetter = input.next();
         columnLetter = columnLetter.trim().toUpperCase();

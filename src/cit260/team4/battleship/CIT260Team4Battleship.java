@@ -88,7 +88,8 @@ public class CIT260Team4Battleship {
                         this.AI.aiTurn(); //calls the aiTurn function from the AI class.
                         break;
                     case "B":
-                       this.Ships.shipInput();
+                       this.Ships.shipList();
+                        //this.Ships.shipInput();
                         //shipMenu.ShipMenu();
                        //this.Ships.showName();  //calls the showName function from the Ships class.
                        // this.Ships.showSize();  //calls the showSize function from the Ships class.

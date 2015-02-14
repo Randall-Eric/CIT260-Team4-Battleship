@@ -46,7 +46,7 @@ public class Ships {
     }
     public void shipInput(){
         Scanner input = new Scanner(System.in);
-        try{
+    try{
         int choice;
         
     
@@ -97,6 +97,20 @@ public class Ships {
       }  
     //return;
     }
-    
+    public void shipList() {
+    String[] shipTitles, nicknames; //= new String[5];
+    shipTitles = new String[] {"Battleship", "Patrol Boat", "Cruiser", "Aircraft Carrier", "Submarine"};
+    nicknames = new String[5];
+    Scanner input = new Scanner(System.in);
+    int i,j;
+    for(i = 0; i < shipTitles.length; i++) {
+            System.out.println("Choose the nickname for your " + shipTitles[i] + ":");
+            nicknames[i] = input.next();
+        }
+    for(j = 0; j < shipTitles.length; j++)  {  
+        System.out.println("Your " + shipTitles[j] + "\'s name is " + nicknames[j]+".");
+        System.out.println();
+        }
+    }
     }
 

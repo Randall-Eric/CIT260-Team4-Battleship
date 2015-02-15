@@ -18,6 +18,17 @@ public class SettingsMenuControl {
     int difficulty;     //0=easy, 1=hard
     int hints;          //0=disabled, 1=enabled
     int gamemode;       //Gamemode - normal=0, all battleships=1, multishot=2
+    String availableGamemodes[]={
+        "Normal", 
+        "All Battleships", 
+        "All Carriers", 
+        "All Destroyers", 
+        "All PT Boats", 
+        "All Subs",
+        "Multishot", 
+        "Nukes", 
+        "Mines"
+        };
 
     
     //public SettingsMenuControl(){
@@ -54,10 +65,14 @@ public class SettingsMenuControl {
     }
     
     public void displayGameMode(){
+        int i;
+        
         System.out.println();
         displaySettingsBorder();
-        System.out.println(
-                "\tThe Game Mode option will be located here");
+        System.out.println("Available Gamemodes for Battleship: \n");
+        for (i=0; i<availableGamemodes.length; i++){
+                   System.out.println(availableGamemodes[i] + "\n");
+        }
         displaySettingsBorder();
         
     }

@@ -13,11 +13,12 @@ public class MainMenuView {
  private final static String [][] menuItems = {
         {"N", "New Game"},
         {"H", "Help Menu"},
+        {"B", "View Board"},
         {"X", "Exit"}
     };
     
     private MainMenuControl mainMenuControl = new MainMenuControl();
-
+    private Board Board= new Board();
 public void mainMenuInput(){  
   Scanner inFile = new Scanner(System.in);
   String command;
@@ -32,6 +33,9 @@ do{
                         break;
                     case "H":
                         this.mainMenuControl.displayHelp();
+                        break;
+                    case "B":
+                        this.Board.displayGameboard();
                         break;
                     case "X":
                         break;

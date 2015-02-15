@@ -19,9 +19,6 @@ public class ShipPlacement {
             "Carrier", "Battleship", "Submarine", "Destroyer", "Patrol"
     };
     
-    String columns[] = {
-        "A", "B", "C", "D", "E", "F", "G", "H", "I", "J"
-    };
       
     public void shipPlacement() {
     
@@ -38,25 +35,62 @@ public class ShipPlacement {
         row = input.nextInt();   
         System.out.println("What is the direction of the " + ships[i] + " (ex. up, down, left, right)");
         direction = input.next();
+        direction = direction.trim().toUpperCase();
         
-        int extension = shipExtension(i);
-        column = columnValue(columnLetter);
-    
-            if (column <=10 && column >= 1){ 
-                
-                 if (row <=10 && row >= 1){
-                     System.out.print(ships[i] + " placed.\n");
-                     i++;              
-                 }  
+        int extension = shipExtension(i); //calls function to get full number of ships
+        column = columnValue(columnLetter); //calls function to convert column letter to number
+        int shipOccupiedSpace[] = shipDirection(direction, column, row, extension); //calls function to add or subtract for direction of ship
+        
+        one:    if (direction.equals("UP") || direction.equals("DOWN")){
+            
+            int rows[] = new int[shipOccupiedSpace.length];
+            System.arraycopy(shipOccupiedSpace, 0, rows, 0, shipOccupiedSpace.length);
+            
+            for(int x: rows){
+                if (x <=10 && x >= 1)
+                    continue;
+                else
+                    System.out.print("Selection out of board boundaries.\n");
+                    break one;
+            }
+            if (column <=10 && column >= 1){
+                        System.out.print(ships[i] + " placed.\n");
+                        i++;
             }
             else 
                 System.out.print("Selection out of board boundaries.\n");
+                
+        }    
         
-    }
+        
+        else{
+            
+            int columns[] = new int[shipOccupiedSpace.length];
+            System.arraycopy(shipOccupiedSpace, 0, columns, 0, shipOccupiedSpace.length);
+            
+            for(int x: columns){
+                if (x <=10 && x >= 1)
+                    continue;
+                else
+                    System.out.print("Selection out of board boundaries.\n");
+                    break one;
+            }
+            if (row <=10 && row >= 1){
+                        System.out.print(ships[i] + " placed.\n");
+                        i++;
+            }
+            else 
+                System.out.print("Selection out of board boundaries.\n");
+                
+        }  
+}
     
     System.out.print("Ships placed. Get ready for the game!!!");
-}  
+
+}
+  
     
+   //Function to get full number of spaces occupied by each ship 
    public int shipExtension(int ship) {
        
        int ext;        
@@ -81,6 +115,7 @@ public class ShipPlacement {
         return ext;
    } 
    
+   //Function to convert column letter to number.
    public int columnValue (String column){
        
        int value;
@@ -121,6 +156,38 @@ public class ShipPlacement {
                break;
        }
        return value;    
+   }
+   
+   //Adds or subtracts to row or column depending on ship direction
+   public int[] shipDirection(String direction, int column, int row, int ext) {
+       
+       int shipSpaces[] = new int[ext + 1];
+       int i;
+       
+       switch(direction){
+           case "UP":
+               for(i = 0; i <= ext; i++)
+                    shipSpaces[i] = row - i;
+               break;
+           case "DOWN":
+               for(i = 0; i <= ext; i++)
+                    shipSpaces[i] = row + i;
+               break;
+           case "LEFT":
+               for(i = 0; i <= ext; i++)
+                    shipSpaces[i] = column - i;
+               break;
+           case "RIGHT":
+               for(i=0; i <= ext; i++)
+                    shipSpaces[i] = column + i;
+               break;
+           default:
+               for(i=0; i <= ext; i++)
+                   shipSpaces[i] = 100;
+               break;
+       }
+       
+       return shipSpaces;
    }
     
 }

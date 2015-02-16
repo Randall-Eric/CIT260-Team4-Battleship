@@ -51,7 +51,7 @@ public class CIT260Team4Battleship {
         {"A", "AI Turn"},
         {"B", "Browse Ships"},    
         {"G", "Play Game"},
-        {"D", "Diplay the Board"},
+        {"D", "Decorated Veterans"},
         {"S", "Settings"},
         {"H", "Help Menu"},
         {"X", "Exit"}
@@ -99,7 +99,6 @@ public class CIT260Team4Battleship {
                         //this.Gameplay.hitOrMiss(); //calls the hitOrMiss function from the Gameplay class.
                         //this.Gameplay.gameExit(); //calls the gameExit function from the Gameplay class.
                         this.shipPlacement.shipPlacement();
-                        
                         break;
                     case "D":
                         this.board.displayGameboard();

@@ -39,7 +39,7 @@ public class CIT260Team4Battleship {
         }
        
         MainMenuView menu= new MainMenuView();//instance creation for MainMenuView class
-      
+        
                               
  public void displayMain(){
               MainMenuView mainMenu = new MainMenuView();
@@ -51,7 +51,7 @@ public class CIT260Team4Battleship {
         {"A", "AI Turn"},
         {"B", "Browse Ships"},    
         {"G", "Play Game"},
-        {"D", "Decorated Veterans"},
+        {"D", "Diplay the Board"},
         {"S", "Settings"},
         {"H", "Help Menu"},
         {"X", "Exit"}
@@ -67,6 +67,7 @@ public class CIT260Team4Battleship {
     private final SettingsMenuView settingsMenuView = new SettingsMenuView();               //calls the Settings Menu class. 
     private final HelpMenuView HelpMenuView = new HelpMenuView();   //calls the HelpMenuView class. 
     private final ShipPlacement shipPlacement = new ShipPlacement();
+    private final Board board = new Board();
     
     public CIT260Team4Battleship(){
         
@@ -98,11 +99,13 @@ public class CIT260Team4Battleship {
                         //this.Gameplay.hitOrMiss(); //calls the hitOrMiss function from the Gameplay class.
                         //this.Gameplay.gameExit(); //calls the gameExit function from the Gameplay class.
                         this.shipPlacement.shipPlacement();
+                        
                         break;
                     case "D":
-                        this.ScoreBoardMenuView.scoreBoardMenuInput();
-                        this.ScoreBoard.showHighScore(); //calls the showHighScore function from the ScoreBoard class.
-                        this.ScoreBoard.scoreStats(); //calls the showStats function from the ScoreBoard class.
+                        this.board.displayGameboard();
+                        //this.ScoreBoardMenuView.scoreBoardMenuInput();
+                        //this.ScoreBoard.showHighScore(); //calls the showHighScore function from the ScoreBoard class.
+                        //this.ScoreBoard.scoreStats(); //calls the showStats function from the ScoreBoard class.
                         break; 
                     case "S":
                         this.settingsMenuView.settingsInput(); //calls the SettingsMenuView class

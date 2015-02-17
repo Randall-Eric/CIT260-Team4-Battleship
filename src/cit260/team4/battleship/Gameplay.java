@@ -122,7 +122,7 @@ public void exit (){
         System.out.println("\t************************************************************\n");
     }
 
-    void playerNames() {
+    public static void playerNames() {
         {
       int [] numbers = {1, 2, 3, 4, 5, 6, 7};
 
@@ -130,7 +130,7 @@ public void exit (){
          System.out.print( "Player " + x + "   " );
       }
       System.out.print("\n");
-      String [] names ={"Dave    ", "   Taylor   ", "  Rebecca  ", "  Eric     ","  Christian  ", "Jordan     ", "Matt   "};
+      String [] names ={"Dave ", "Taylor ", "Rebecca ", "Eric ","Christian ", "Jordan ", "Matt "};
       for( String name : names ) {
          System.out.print( name );
 

@@ -21,9 +21,7 @@ public class CIT260Team4Battleship {
         CIT260Team4Battleship game = new CIT260Team4Battleship(); // constructor - creates instance of class called "game"
         game.getName(); //calls the getName() method for the "game" instance of the class
         game.displayHelp(); //calls the getName() method for the "name" instance of the class
-        //game.mainMenuInput();
-        game.mainMenuInput();
-        game.displayMain();
+        game.mainMenuItems();
 
     }
         
@@ -35,29 +33,32 @@ public class CIT260Team4Battleship {
         public void displayHelp() {
             System.out.println("Welcome, " + this.firstName + "!"); //displays welcome message and description
             System.out.println(this.description);
+            
         }
-       
-        MainMenuView menu= new MainMenuView();//instance creation for MainMenuView class
-        
-                              
- public void displayMain(){
-              MainMenuView mainMenu = new MainMenuView();
-        mainMenu.mainMenuInput();
- }
-        
-    
+        public void mainMenuItems () {
+            this.MainMenuView.mainMenuInput();
+            
+        }
+        private final MainMenuView MainMenuView = new MainMenuView();
+}
+            
+
+
+
+/**
         private final static String [][] mainMenuItems = {//sets up the Main MainMenuView Choices after putting name in. 
-        {"A", "AI Turn"},
-        {"B", "Browse Ships"},    
-        {"G", "Play Game"},
-        {"D", "Display the Board"},
+        //{"A", "AI Turn"},
+        {"BS", "Browse Ships"},    
+        {"D", "Decorated Veterans"},
+        {"M", "Main Menu Options"},
+        {"P", "Play Game"},
         {"S", "Settings"},
         {"H", "Help Menu"},
         {"X", "Exit"}
     };
     
     
-    private final AI AI = new AI();                                 //calls the AI class. 
+    //private final AI AI = new AI();                                 //calls the AI class. 
     private final Ships Ships = new Ships();                        //calls the Ships class. 
     private final ShipMenu shipMenu = new ShipMenu();
     private final Gameplay Gameplay = new Gameplay();               //calls the Gameplay class. 
@@ -66,7 +67,7 @@ public class CIT260Team4Battleship {
     private final SettingsMenuView settingsMenuView = new SettingsMenuView();               //calls the Settings Menu class. 
     private final HelpMenuView HelpMenuView = new HelpMenuView();   //calls the HelpMenuView class. 
     private final ShipPlacement shipPlacement = new ShipPlacement();
-    private final Board board = new Board();
+    private final MainMenuView MainMenuView = new MainMenuView();
     
     public CIT260Team4Battleship(){
         
@@ -84,10 +85,10 @@ public class CIT260Team4Battleship {
                 command = command.trim().toUpperCase(); //changes input to always be uppercase, in case someone inputs a lowercase letter. 
                 
                 switch (command){
-                    case "A":
-                        this.AI.aiTurn(); //calls the aiTurn function from the AI class.
-                        break;
-                    case "B":
+                   // case "A":
+                   //     this.AI.aiTurn(); //calls the aiTurn function from the AI class.
+                   //     break;
+                    case "BS":
                        this.Ships.shipList();
                         //this.Ships.shipInput();
                         //shipMenu.ShipMenu();
@@ -95,19 +96,20 @@ public class CIT260Team4Battleship {
                        // this.Ships.showSize();  //calls the showSize function from the Ships class.
                        // this.Ships.getAccuracy(5, 10);  //calls the getAccuracy function from the Ships class.
                         break;
-                    case "G":
+                    case "D":
+                        this.ScoreBoardMenuView.scoreBoardMenuInput();
+                        this.ScoreBoard.showHighScore(); //calls the showHighScore function from the ScoreBoard class.
+                        this.ScoreBoard.scoreStats(); //calls the showStats function from the ScoreBoard class.
+                        break;
+                    case "M":
+                        this.MainMenuView.mainMenuInput();
+                        break;
+                    case "P":
                         this.Gameplay.playerNames(); 
                         this.shipPlacement.shipPlacement();
                         this.Gameplay.hitOrMiss(); //calls the hitOrMiss function from the Gameplay class.
                         this.Gameplay.gameExit(); //calls the gameExit function from the Gameplay class.
-                        
-                        break;
-                    case "D":
-                        this.board.displayGameboard();
-                        //this.ScoreBoardMenuView.scoreBoardMenuInput();
-                        //this.ScoreBoard.showHighScore(); //calls the showHighScore function from the ScoreBoard class.
-                        //this.ScoreBoard.scoreStats(); //calls the showStats function from the ScoreBoard class.
-                        break; 
+                        break;    
                     case "S":
                         this.settingsMenuView.settingsInput(); //calls the SettingsMenuView class
                         break;
@@ -125,12 +127,13 @@ public class CIT260Team4Battleship {
         
     public final void display (){
         System.out.println("\n\t************************************************************"); //decoration. 
-        System.out.println("\tEnter the letter for your selection from the help menu:"); //simple output message. 
+        System.out.println("\tEnter the letter for your selection from the main menu:"); //simple output message. 
         for (String[] mainMenuItem : CIT260Team4Battleship.mainMenuItems) {
             System.out.println("\t  " + mainMenuItem[0] + "\t" + mainMenuItem[1]);
         }
         System.out.println("\t************************************************************\n");
     }
+*/
 
-}
+            
 

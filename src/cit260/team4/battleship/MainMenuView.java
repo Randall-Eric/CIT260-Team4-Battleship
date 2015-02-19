@@ -52,23 +52,25 @@ public class MainMenuView {
                    //     break;
                     case "BS":
                        this.Ships.shipList();
-                        //this.Ships.shipInput();
-                        //shipMenu.ShipMenu();
-                       //this.Ships.showName();  //calls the showName function from the Ships class.
-                       // this.Ships.showSize();  //calls the showSize function from the Ships class.
-                       // this.Ships.getAccuracy(5, 10);  //calls the getAccuracy function from the Ships class.
+                       this.Ships.shipInput();
+                       //this.shipMenu.ShipMenu();
+                       this.Ships.showName();  //calls the showName function from the Ships class.
+                       this.Ships.showSize();  //calls the showSize function from the Ships class.
+                       this.Ships.getAccuracy(5, 10);  //calls the getAccuracy function from the Ships class.
                         break;
                     case "C":
                         this.AuthorCreditView.authorInput();
                         break; 
                     case "D":
+                        this.ScoreBoard.lessonSixArray();
+                        this.ScoreBoard.lessonSixArrayPrnt();
                         this.ScoreBoardMenuView.scoreBoardMenuInput();
                         this.ScoreBoard.showHighScore(); //calls the showHighScore function from the ScoreBoard class.
                         this.ScoreBoard.scoreStats(); //calls the showStats function from the ScoreBoard class.
                         break;
                     case "P":
-                        //this.Gameplay.playerNames(); 
-                        //this.shipPlacement.shipPlacement();
+                        this.Gameplay.playerNames(); 
+                        this.shipPlacement.shipPlacement();
                         this.Gameplay.playGame(); //calls the hitOrMiss function from the Gameplay class.
                         this.Gameplay.gameExit(); //calls the gameExit function from the Gameplay class.
                         break;    
@@ -97,20 +99,7 @@ public class MainMenuView {
     }
     
 }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+  
     
 /**    
     private final static String [][] menuItems = {

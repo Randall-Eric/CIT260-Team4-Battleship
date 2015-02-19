@@ -31,7 +31,7 @@ public class Gameplay {
     //String patrolBoat = "C";
     //int aircraftHit = 1; //will be an array?
     //int patrolHit = 4; //will also be an array?
-    //int x = 1;
+    int x = 1;
     
     public void playGame () {
     
@@ -49,7 +49,7 @@ public class Gameplay {
             moves = kb.nextLine();
         }
 }
-        
+       
     
     
     /**public boolean hitOrMiss() {

@@ -11,8 +11,34 @@ package cit260.team4.battleship;
  */
 public class ScoreBoard {
     int highscore = 155;
-     
+    int nums [] = { 100, 45, 67, - 3, 20 }; 
+    int size;
     
+    public void lessonSixArray () {
+                    
+        int a, b, t; 
+        size = 5;
+        
+        System.out.print ("Original array: ");
+        for (int i=0; i < size; i++)
+            System.out.print(" ," + nums [i]);
+        System.out.println();
+        
+        for (a=1; a < size; a++)
+            for(b=size-1; b >= a; b--){
+                if (nums[b-1] > nums[b])  {
+                    t = nums[b-1]; 
+                    nums [b-1] = nums[b];
+                    nums[b] = t;
+                }
+            }
+    }
+    public void lessonSixArrayPrnt () {
+        System.out.print ("Sorted array is: ");
+        for (int i=0; i < size; i++)
+            System.out.print(" " + nums [i]); 
+        System.out.println(); 
+    }
     
     
     public void showHighScore(){

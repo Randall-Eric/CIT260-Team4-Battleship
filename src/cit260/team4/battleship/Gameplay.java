@@ -13,6 +13,38 @@ import java.util.Scanner;
  */
 public class Gameplay {
      
+    /**public void lessonSix(String[ ] args)
+     {
+             String[ ] names = {"Dave", "Matt", "Tammy", "Eric", "Jordan", "Christian", "Taylor"};
+             lessonSixSorted (names);
+             for ( int k = 0;  k < 4;  k++ )
+                System.out.println( names [ k ] );
+      }
+
+      public void lessonSixSorted(String  x [ ] )
+      {
+          
+            int j;
+            boolean flag = true;  // will determine when the sort is finished
+            String temp;
+
+            while ( flag )
+            {
+                  flag = false;
+                  for ( j = 0;  j < x.length - 1;  j++ )
+                  {
+                          if ( x [ j ].compareToIgnoreCase( x [ j+1 ] ) > 0 )
+                          {                                             // ascending sort
+                                      temp = x [ j ];
+                                      x [ j ] = x [ j+1];     // swapping
+                                      x [ j+1] = temp; 
+                                      flag = true;
+                           } 
+                   } 
+            } 
+      } 
+    */
+    
     String returnOutput;
     String playerTurnOutput;
     String [] movesary = 
@@ -49,7 +81,6 @@ public class Gameplay {
             moves = kb.nextLine();
         }
 }
-       
     
     
     /**public boolean hitOrMiss() {

@@ -12,12 +12,13 @@ import java.util.Scanner;
  * @author erandall
  */
 public class CIT260Team4Battleship {
-           
+
+    
     String firstName;//enter player first name
     String description = "This is the battleship game. Enjoy!!";// a description of the game
       
        
-    public static void main(String[] args) {
+   public static void main(String[] args) {
         CIT260Team4Battleship game = new CIT260Team4Battleship(); // constructor - creates instance of class called "game"
         game.getName(); //calls the getName() method for the "game" instance of the class
         game.displayHelp(); //calls the getName() method for the "name" instance of the class
@@ -34,7 +35,7 @@ public class CIT260Team4Battleship {
             System.out.println("Welcome, " + this.firstName + "!"); //displays welcome message and description
             System.out.println(this.description);
             
-        }
+        }        
         
         private final MainMenuView MainMenuView = new MainMenuView();
         public void mainMenuItems () {

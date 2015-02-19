@@ -35,11 +35,13 @@ public class CIT260Team4Battleship {
             System.out.println(this.description);
             
         }
+        
+        private final MainMenuView MainMenuView = new MainMenuView();
         public void mainMenuItems () {
             this.MainMenuView.mainMenuInput();
             
         }
-        private final MainMenuView MainMenuView = new MainMenuView();
+        
 }
             
 

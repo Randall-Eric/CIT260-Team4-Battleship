@@ -62,6 +62,7 @@ public class MainMenuView {
                         this.AuthorCreditView.authorInput();
                         break; 
                     case "D":
+                        this.ScoreBoard.lessonSixindividual();
                         this.ScoreBoard.lessonSixArray();
                         this.ScoreBoard.lessonSixArrayPrnt();
                         this.ScoreBoardMenuView.scoreBoardMenuInput();

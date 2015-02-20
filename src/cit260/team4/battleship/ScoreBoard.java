@@ -41,6 +41,21 @@ public class ScoreBoard {
     }
     
     
+    public void lessonSixindividual () {
+        int sum = 0;
+        int scores [] = {5,24,4,68,213,55,73,106,403,20,46};
+        int max = scores [0];
+        for(int x : scores){
+            System.out.println("Each Score is: " + x);
+            max = Math.max(x,max);
+        }
+        System.out.println("Maximum Value: " + max);
+    }
+    
+    
+    
+    
+    
     public void showHighScore(){
         System.out.println("The high score for this game is: " + highscore);
 }

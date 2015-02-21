@@ -48,7 +48,7 @@ public class GameStatus {
                 max=x; 
         }
         
-        System.out.println("Your highscore from all of your games is: "+ max);
+        System.out.println("Your highscore from all of your scores is: "+ max);
         
     }        
     }

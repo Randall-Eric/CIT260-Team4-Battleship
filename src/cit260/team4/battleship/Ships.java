@@ -104,7 +104,14 @@ public class Ships {
     }
     
      public void shipStatus(){
-       for(int x: nums) sum += x;
+       for(int y = 0; y<this.shipSize.length; y++){
+     int sum = 0;
+         for(int x: this.shipSize[y]) sum += x;
+         if (sum == this.shipSize[y].length){
+             System.out.println (this.shipTitles[y] + " is sunk");
+         } 
+         else System.out.println (this.shipTitles[y] + " is not sunk.");
+       }  
    }
     public int[] shipLength = new int[]{4,2,3,5,4};
     public int[][] shipSize = new int[5][];

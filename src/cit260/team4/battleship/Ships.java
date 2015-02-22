@@ -123,5 +123,33 @@ public class Ships {
         System.out.println();
         }
     }
+    public void shipAvg(){
+    int numz[] = new int[5];
+    int sum=0;
+    int avg;
+    int i;
+    Scanner in = new Scanner(System.in);
+    
+    try{
+        for(i=0; i < numz.length;i++){
+            System.out.println("Enter numer "+ (i+1));
+            numz[i]=in.nextInt();
+            }
+        }
+    catch(InputMismatchException exception){
+        System.out.println("Put in an integer, please.");
+        return;
+        }
+    for(int x : numz){
+        sum += x;
+    }
+    avg=sum/numz.length;
+    
+        System.out.println("The sum is: " + sum);
+        System.out.println("The average is: " + avg);
+    }
+    
+    
+    
     }
 

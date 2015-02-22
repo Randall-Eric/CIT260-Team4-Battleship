@@ -40,4 +40,11 @@ public class Board {
                 System.out.print(gameboard[i] + ",\n ");
           }
         }
-}
+        public void clearTheBoard(){
+            
+            for(i = 0; i<this.gameboard.length; i++){
+                System.out.println("The Board has been cleared");
+                    
+                }
+            }
+        }

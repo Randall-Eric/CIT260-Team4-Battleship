@@ -51,12 +51,13 @@ public class MainMenuView {
                    //     this.AI.aiTurn(); //calls the aiTurn function from the AI class.
                    //     break;
                     case "BS":
-                       this.Ships.shipList();
-                       this.Ships.shipInput();
+                       //this.Ships.shipList();
+                       //this.Ships.shipInput();
                        //this.shipMenu.ShipMenu();
-                       this.Ships.showName();  //calls the showName function from the Ships class.
-                       this.Ships.showSize();  //calls the showSize function from the Ships class.
-                       this.Ships.getAccuracy(5, 10);  //calls the getAccuracy function from the Ships class.
+                       //this.Ships.showName();  //calls the showName function from the Ships class.
+                       //this.Ships.showSize();  //calls the showSize function from the Ships class.
+                       //this.Ships.getAccuracy(5, 10);  //calls the getAccuracy function from the Ships class.
+                       this.Ships.shipAvg();
                         break;
                     case "C":
                         this.AuthorCreditView.authorInput();

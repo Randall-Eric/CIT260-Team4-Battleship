@@ -77,6 +77,15 @@ public class SettingsMenuControl {
         
     }
     
+    public void gameCount(){ //lesson 6 individual assignment
+        int total = 0;
+        int count [] = {3,5,63,13,20,15,16,30};
+            for (int i=0; i < count.length; i++){
+            total += count[i];
+            System.out.println("Total games played by player is: " + total);
+    }
+        
+    }
     public void displayHints(){
         System.out.println();
         displaySettingsBorder();

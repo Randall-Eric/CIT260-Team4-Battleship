@@ -20,6 +20,11 @@ public class Ships {
   private ShipMenu shipmenu = new ShipMenu();
   
   public Ships(){
+      for (int i=0; i<this.shipSize.length; i++){
+          for (int j=0; j<this.shipLength[i]; j++){
+              this.shipSize[i][j]=0;
+          }
+      }
   
   }
     
@@ -97,20 +102,61 @@ public class Ships {
       }  
     //return;
     }
+    
+     public void shipStatus(){
+       for(int y = 0; y<this.shipSize.length; y++){
+     int sum = 0;
+         for(int x: this.shipSize[y]) sum += x;
+         if (sum == this.shipSize[y].length){
+             System.out.println (this.shipTitles[y] + " is sunk");
+         } 
+         else System.out.println (this.shipTitles[y] + " is not sunk.");
+       }  
+   }
+    public int[] shipLength = new int[]{4,2,3,5,4};
+    public int[][] shipSize = new int[5][];
+    public String[] shipTitles = new String[] {"Battleship", "Patrol Boat", "Cruiser", "Aircraft Carrier", "Submarine"};
     public void shipList() {
-    String[] shipTitles, nicknames; //= new String[5];
-    shipTitles = new String[] {"Battleship", "Patrol Boat", "Cruiser", "Aircraft Carrier", "Submarine"};
+    String[] nicknames; //= new String[5];
     nicknames = new String[5];
     Scanner input = new Scanner(System.in);
     int i,j;
-    for(i = 0; i < shipTitles.length; i++) {
-            System.out.println("Choose the nickname for your " + shipTitles[i] + ":");
+    for(i = 0; i < this.shipTitles.length; i++) {
+            System.out.println("Choose the nickname for your " + this.shipTitles[i] + ":");
             nicknames[i] = input.next();
         }
-    for(j = 0; j < shipTitles.length; j++)  {  
-        System.out.println("Your " + shipTitles[j] + "\'s name is " + nicknames[j]+".");
+    for(j = 0; j < this.shipTitles.length; j++)  {  
+        System.out.println("Your " + this.shipTitles[j] + "\'s name is " + nicknames[j]+".");
         System.out.println();
         }
     }
+    public void shipAvg(){
+    int numz[] = new int[5];
+    int sum=0;
+    int avg;
+    int i;
+    Scanner in = new Scanner(System.in);
+    
+    try{
+        for(i=0; i < numz.length;i++){
+            System.out.println("Enter numer "+ (i+1));
+            numz[i]=in.nextInt();
+            }
+        }
+    catch(InputMismatchException exception){
+        System.out.println("Put in an integer, please.");
+        return;
+        }
+    for(int x : numz){
+        sum += x;
+    }
+    avg=sum/numz.length;
+    
+        System.out.println("The sum is: " + sum);
+        System.out.println("The average is: " + avg);
+    }
+    
+    
+    
     }
 

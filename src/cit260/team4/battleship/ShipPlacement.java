@@ -33,7 +33,8 @@ public class ShipPlacement {
     int i = 0;
         
     while (i < 5) 
-        one: {   
+        one: 
+        {   
     
         Scanner input = new Scanner(System.in);
         System.out.println("\n");
@@ -54,21 +55,23 @@ public class ShipPlacement {
         int shipOccupiedSpace[] = shipDirection(direction, column, row, extension); //calls function to add or subtract for direction of ship
         
         for(int x: shipOccupiedSpace){
-                if (x <= 100 && x >= 11){
-                for(int y[]: shipTable){
+                if (x <= 100 && x >= 11)
+                for(int y[]: shipTable)
                     for(int z: y){
                         if (z != x){
                            continue;
                         }
-                        else
-                            System.out.print("Selection already taken by other ship.\n");
+                        else{
+                            System.out.print("\nSelection already taken by other ship.\n");
                             break one;
+                        }
                     }
-                }   
-            }
-                else
-                    System.out.print("Selection is out of board boundaries.\n");
+                   
+            
+                else{
+                    System.out.print("\nSelection is out of board boundaries.\n");
                     break one;
+                }
 
         }
                 System.out.print("\n" + ships[i] + " placed.\n");
@@ -78,6 +81,18 @@ public class ShipPlacement {
     
     System.out.print("Ships placed. Get ready for the game!!!\n");
     
+    }
+    
+    public void shipMaximum(){
+        int largest = shipTable[0][0];
+        for(int y[]: shipTable){
+                    for(int z: y){
+                        if(largest > z){
+                            largest = z;
+                            System.out.print("The largest value for a ship is " + largest);
+                        }
+                    }
+        }
     }
   
     

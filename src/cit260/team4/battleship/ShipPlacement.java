@@ -18,76 +18,67 @@ public class ShipPlacement {
     String ships[] = {
             "Carrier", "Battleship", "Submarine", "Destroyer", "Patrol"
     };
-    
+    int shipTable[][] = new int[5][];{
+    shipTable[0] = new int[5];
+    shipTable[1] = new int[4];
+    shipTable[2] = new int[3];
+    shipTable[3] = new int[3];
+    shipTable[4] = new int[2];
+    }
       
     public void shipPlacement() {
     
+    
+    
     int i = 0;
         
-    while (i < 5) {   
-        
+    while (i < 5) 
+        one: {   
+    
         Scanner input = new Scanner(System.in);
         System.out.println("\n");
         System.out.println("Enter the " + ships[i] + " start column: ");
         String columnLetter = input.next();
         columnLetter = columnLetter.trim().toUpperCase();
+        column = columnValue(columnLetter); //calls function to convert column letter to number
+        
         System.out.println("Enter the " + ships[i] + " start row: ");
-        row = input.nextInt();   
+        row = input.nextInt();  
+        
         System.out.println("What is the direction of the " + ships[i] + " (ex. up, down, left, right)");
         direction = input.next();
         direction = direction.trim().toUpperCase();
         
         int extension = shipExtension(i); //calls function to get full number of ships
-        column = columnValue(columnLetter); //calls function to convert column letter to number
+        
         int shipOccupiedSpace[] = shipDirection(direction, column, row, extension); //calls function to add or subtract for direction of ship
         
-        one:    if (direction.equals("UP") || direction.equals("DOWN")){
-            
-            int rows[] = new int[shipOccupiedSpace.length];
-            System.arraycopy(shipOccupiedSpace, 0, rows, 0, shipOccupiedSpace.length);
-            
-            for(int x: rows){
-                if (x <=10 && x >= 1)
-                    continue;
+        for(int x: shipOccupiedSpace){
+                if (x <= 100 && x >= 11){
+                for(int y[]: shipTable){
+                    for(int z: y){
+                        if (z != x){
+                           continue;
+                        }
+                        else
+                            System.out.print("Selection already taken by other ship.\n");
+                            break one;
+                    }
+                }   
+            }
                 else
-                    System.out.print("Selection out of board boundaries.\n");
+                    System.out.print("Selection is out of board boundaries.\n");
                     break one;
-            }
-            if (column <=10 && column >= 1){
-                        System.out.print(ships[i] + " placed.\n");
-                        i++;
-            }
-            else 
-                System.out.print("Selection out of board boundaries.\n");
-                
-        }    
-        
-        
-        else{
-            
-            int columns[] = new int[shipOccupiedSpace.length];
-            System.arraycopy(shipOccupiedSpace, 0, columns, 0, shipOccupiedSpace.length);
-            
-            for(int x: columns){
-                if (x <=10 && x >= 1)
-                    continue;
-                else
-                    System.out.print("Selection out of board boundaries.\n");
-                    break one;
-            }
-            if (row <=10 && row >= 1){
-                        System.out.print(ships[i] + " placed.\n");
-                        i++;
-            }
-            else 
-                System.out.print("Selection out of board boundaries.\n");
-                
-        }  
-}
-    
-    System.out.print("Ships placed. Get ready for the game!!!");
 
-}
+        }
+                System.out.print("\n" + ships[i] + " placed.\n");
+                shipTable[i] = shipOccupiedSpace;
+                i++;
+    }
+    
+    System.out.print("Ships placed. Get ready for the game!!!\n");
+    
+    }
   
     
    //Function to get full number of spaces occupied by each ship 
@@ -122,37 +113,37 @@ public class ShipPlacement {
        
        switch(column) {
            case "A":
-               value = 1;
-               break;
-           case "B":
-               value = 2;
-               break;
-           case "C":
-               value = 3;
-               break;
-           case "D":
-               value = 4;
-               break;
-           case "E":
-               value = 5;
-               break;
-           case "F":
-               value = 6;
-               break;
-           case "G":
-               value = 7;
-               break;
-           case "H":
-               value = 8;
-               break;
-           case "I":
-               value = 9;
-               break;
-           case "J":
                value = 10;
                break;
-           default:
+           case "B":
+               value = 20;
+               break;
+           case "C":
+               value = 30;
+               break;
+           case "D":
+               value = 40;
+               break;
+           case "E":
+               value = 50;
+               break;
+           case "F":
+               value = 60;
+               break;
+           case "G":
+               value = 70;
+               break;
+           case "H":
+               value = 80;
+               break;
+           case "I":
+               value = 90;
+               break;
+           case "J":
                value = 100;
+               break;
+           default:
+               value = 1000;
                break;
        }
        return value;    
@@ -167,27 +158,27 @@ public class ShipPlacement {
        switch(direction){
            case "UP":
                for(i = 0; i <= ext; i++)
-                    shipSpaces[i] = row - i;
+                    shipSpaces[i] = column + (row - i);
                break;
            case "DOWN":
                for(i = 0; i <= ext; i++)
-                    shipSpaces[i] = row + i;
+                    shipSpaces[i] = column + (row + i);
                break;
            case "LEFT":
                for(i = 0; i <= ext; i++)
-                    shipSpaces[i] = column - i;
+                    shipSpaces[i] = row + (column - (i * 10));
                break;
            case "RIGHT":
                for(i=0; i <= ext; i++)
-                    shipSpaces[i] = column + i;
+                    shipSpaces[i] = row + (column + (i * 10));
                break;
            default:
                for(i=0; i <= ext; i++)
-                   shipSpaces[i] = 100;
+                   shipSpaces[i] = 1000;
                break;
        }
        
        return shipSpaces;
    }
-    
+
 }

@@ -103,9 +103,9 @@ public class Ships {
     //return;
     }
     
-     //public void shipStatus(){
-     //  for(int x: nums) sum += x;
-   //}
+     public void shipStatus(){
+       for(int x: nums) sum += x;
+   }
     public int[] shipLength = new int[]{4,2,3,5,4};
     public int[][] shipSize = new int[5][];
     public String[] shipTitles = new String[] {"Battleship", "Patrol Boat", "Cruiser", "Aircraft Carrier", "Submarine"};

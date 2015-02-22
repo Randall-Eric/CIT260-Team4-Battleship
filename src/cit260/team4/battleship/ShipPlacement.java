@@ -18,6 +18,7 @@ public class ShipPlacement {
     String ships[] = {
             "Carrier", "Battleship", "Submarine", "Destroyer", "Patrol"
     };
+    //This is the array that has all values for the player slected ship locations
     int shipTable[][] = new int[5][];{
     shipTable[0] = new int[5];
     shipTable[1] = new int[4];
@@ -56,7 +57,7 @@ public class ShipPlacement {
         
         for(int x: shipOccupiedSpace){
                 if (x <= 100 && x >= 11)
-                for(int y[]: shipTable)
+                for(int y[]: shipTable) //This compares the ship against all other already placed ships.
                     for(int z: y){
                         if (z != x){
                            continue;
@@ -83,6 +84,7 @@ public class ShipPlacement {
     
     }
     
+    //This is for the weekly assignment
     public void shipMaximum(){
         int largest = shipTable[0][0];
         for(int y[]: shipTable){

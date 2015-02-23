@@ -13,7 +13,11 @@ import java.util.Scanner;
  */
 public class Gameplay {
      
-    /**public void lessonSix(String[ ] args)
+    /**
+     *
+     * @param args
+     */
+    public void lessonSix(String[ ] args)
      {
              String[ ] names = {"Dave", "Matt", "Tammy", "Eric", "Jordan", "Christian", "Taylor"};
              lessonSixSorted (names);
@@ -43,7 +47,7 @@ public class Gameplay {
                    } 
             } 
       } 
-    */
+   
     
     String returnOutput;
     String playerTurnOutput;

@@ -39,5 +39,16 @@ public class GameStatus {
             System.out.println("Sorry!\t Invalid \n Input");    
         }
 
-            
+    public void playersHighScore(){
+        int nums[]={60,90,100,120,150};
+        int max=0;
+        
+        for(int x:nums){
+            if (x>max)
+                max=x; 
+        }
+        
+        System.out.println("Your highscore from all of your scores is: "+ max);
+        
+    }        
     }

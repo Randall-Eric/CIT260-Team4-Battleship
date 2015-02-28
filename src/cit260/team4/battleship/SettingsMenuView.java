@@ -17,6 +17,7 @@ public class SettingsMenuView {
         {"D", "Set Difficulty"},
         {"M", "Set Game Mode"},
         {"H", "Enable Hints"},
+        {"T", "Total Games"},
         {"X", "Exit"}
     };
     
@@ -46,6 +47,9 @@ public class SettingsMenuView {
                         break;
                     case "H":
                         this.settingsMenuControl.displayHints();
+                        break;
+                    case "T":
+                        this.settingsMenuControl.gameCount();
                         break;
                     case "X":
                         break;

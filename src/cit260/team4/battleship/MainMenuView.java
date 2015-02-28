@@ -25,7 +25,7 @@ public class MainMenuView {
     
     
     //private final AI AI = new AI();                                 //calls the AI class. 
-    private final Ships Ships = new Ships();                        //calls the Ships class. 
+   // private final Ships Ships = new Ships();                        //calls the Ships class. 
     private final ShipMenu shipMenu = new ShipMenu();
     private final Gameplay Gameplay = new Gameplay();               //calls the Gameplay class. 
     private final ScoreBoard ScoreBoard = new ScoreBoard();         //calls the ScoreBoard class. 
@@ -57,7 +57,7 @@ public class MainMenuView {
                        //this.Ships.showName();  //calls the showName function from the Ships class.
                        //this.Ships.showSize();  //calls the showSize function from the Ships class.
                        //this.Ships.getAccuracy(5, 10);  //calls the getAccuracy function from the Ships class.
-                       this.Ships.shipAvg();
+                       //this.Ships.shipAvg();
                         break;
                     case "C":
                         this.AuthorCreditView.authorInput();

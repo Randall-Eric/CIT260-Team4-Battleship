@@ -113,9 +113,9 @@ public class Ships {
         }
     }
     public void shipAvg(){
-    int numz[] = new int[5];
-    int sum=0;
-    int avg;
+    double numz[] = new double[5];
+    double sum=0;
+    double avg;
     int i;
     Scanner in = new Scanner(System.in);
     
@@ -129,7 +129,7 @@ public class Ships {
         System.out.println("Put in an integer, please.");
         return;
         }
-    for(int x : numz){
+    for(double x : numz){
         sum += x;
     }
     avg=sum/numz.length;

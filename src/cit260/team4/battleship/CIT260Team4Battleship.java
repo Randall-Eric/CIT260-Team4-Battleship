@@ -26,7 +26,7 @@ public class CIT260Team4Battleship {
 
     }
         
-        public void getName(){
+        private void getName(){
             Scanner input = new Scanner(System.in);   // gets input using scanner and puts it into variable firstName
             System.out.println("What is your name?");
             this.firstName = input.next();

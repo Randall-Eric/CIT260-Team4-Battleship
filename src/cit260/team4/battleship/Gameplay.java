@@ -82,14 +82,12 @@ LEGACY CODE:
         }
         } 
             while (!command.equals("X")); //continues to run until X is selected to end it. 
-                return;
     }
 
 private void exit (){
         System.out.println("\n\t************************************************************"); //decoration. 
-        
-        for (int i = 0; i < Gameplay.gameExit.length; i++){
-            System.out.println("\t  " + gameExit[i][0] + "\t" + gameExit[i][1]);
+        for (String[] gameExit1 : Gameplay.gameExit) {
+            System.out.println("\t  " + gameExit1[0] + "\t" + gameExit1[1]);
         }
         System.out.println("\t************************************************************\n");
     }

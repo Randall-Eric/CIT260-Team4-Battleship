@@ -44,7 +44,7 @@ public class HelpMenuControl {
         displayHelpBorder();
     }
     
-    public void displayHelpBorder (){
+    private void displayHelpBorder (){
         System.out.println(
         "\t******************************************************************");
     }

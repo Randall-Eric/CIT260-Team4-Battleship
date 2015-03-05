@@ -21,7 +21,7 @@ public class SettingsMenuView {
         {"X", "Exit"}
     };
     
-    private SettingsMenuControl settingsMenuControl = new SettingsMenuControl();
+    private final SettingsMenuControl settingsMenuControl = new SettingsMenuControl();
 
     public SettingsMenuView(){
         
@@ -55,20 +55,18 @@ public class SettingsMenuView {
                         break;
                     default:
                         System.out.println("Invalid Choice. Please select another option.");
-                        continue;
                 }
             } 
             while (!command.equals("X"));
-                return;
     }
         
-    public final void display (){
+    private void display (){
         System.out.println("\n\t************************************************************");
         System.out.println("\tEnter the letter for your selection from the help menu:");
         
-        for (int i = 0; i < SettingsMenuView.menuItems.length; i++){
-            System.out.println("\t  " + menuItems[i][0] + "\t" + menuItems[i][1]);
-        }
+         for (String[] menuItem : SettingsMenuView.menuItems) {
+             System.out.println("\t  " + menuItem[0] + "\t" + menuItem[1]);
+         }
         System.out.println("\t************************************************************\n");
     }
 }

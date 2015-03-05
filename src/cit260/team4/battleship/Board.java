@@ -23,7 +23,7 @@ public class Board {
                  
         int i;
          int[][] board = new int[10][10]; 
-        public Board (){
+        private Board (){
             for (int j=0; j<board.length; j++) {
                 for (int c=0; c<board[j].length; c++) {
                     board[j][c]=0;
@@ -31,7 +31,7 @@ public class Board {
             }
      
         }
-        public void displayGameboard() {
+        private void displayGameboard() {
             int k;
             String columns[]={"A","B","C","D","E","F","G","H","I","J"};
             for (int j=0; j<board.length; j++){
@@ -45,7 +45,7 @@ public class Board {
                 System.out.print(gameboard[i] + ",\n ");
           }
         }
-        public void clearTheBoard(){
+        private void clearTheBoard(){
             
             for(i = 0; i<this.gameboard.length; i++){
                 System.out.println("The Board has been cleared");

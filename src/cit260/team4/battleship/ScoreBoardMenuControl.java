@@ -48,7 +48,7 @@ public ScoreBoardMenuControl(){
         displayScoreBoardBorder();
     }
     
-    public void displayScoreBoardBorder (){
+    private void displayScoreBoardBorder (){
         System.out.println(
         "\t******************************************************************");
     }

@@ -18,7 +18,7 @@ public class GameStatus {
     int spotsLeft;
     String outPutSpaces;
     
-    public void spacesLeft(){
+    private void spacesLeft(){
         Scanner input = new Scanner(System.in);
         System.out.println("How many spots did you hit of your oppornet on your last turn?");
         userInputFloat = input.nextFloat();
@@ -39,7 +39,7 @@ public class GameStatus {
             System.out.println("Sorry!\t Invalid \n Input");    
         }
 
-    public void playersHighScore(){
+    private void playersHighScore(){
         int nums[]={60,90,100,120,150};
         int max=0;
         

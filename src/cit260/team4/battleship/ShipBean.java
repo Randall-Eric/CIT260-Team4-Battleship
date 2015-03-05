@@ -18,22 +18,22 @@ public class ShipBean implements Serializable {
     
  public ShipBean(){}
   
-  public String getType(){
+  private String getType(){
         return this.type;
   }
-  public int getLength(){
+  private int getLength(){
         return this.length;
   }
-  public int getValue(){
+  private int getValue(){
         return this.value;
   }
-public void setType(String type){
+private void setType(String type){
         this.type=type;
 }
-public void setLength(int length){
+private void setLength(int length){
         this.length=length;
 }
-public void setValue(int value){
+private void setValue(int value){
         this.value=value;
 }
 }

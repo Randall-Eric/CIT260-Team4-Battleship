@@ -6,12 +6,13 @@
 package cit260.team4.battleship;
 
 import java.util.Scanner;
+import java.io.Serializable;
 
 /**
  *
  * @author dbanks
  */
-public class Gameplay {
+public class Gameplay implements Serializable {
      
     /**
      *

@@ -17,13 +17,13 @@ public class AI {
     int newRow;
     String turnPhrase;
     
-    public int aiTurnRow() {
+    private int aiTurnRow() {
         Random randRow = new Random();
         aiTurnRow = randRow.nextInt((10 - 1) + 1) + 1;
         return aiTurnRow;
     }
     
-    public String aiTurnColumn(){
+    private String aiTurnColumn(){
         String[] columns = {
             "A", "B", "C", "D", "E", "F", "G", "H", "I", "J"
         };
@@ -32,7 +32,7 @@ public class AI {
         return aiTurnColumn;
     }
     
-    public void aiTurn(){
+    private void aiTurn(){
         //aiTurnRow = aiTurnRow();
         aiTurnColumn = aiTurnColumn();
         

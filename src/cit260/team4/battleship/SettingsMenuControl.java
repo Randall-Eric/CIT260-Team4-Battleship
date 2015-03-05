@@ -94,7 +94,7 @@ public class SettingsMenuControl {
         displaySettingsBorder();
     }
     
-    public void displaySettingsBorder (){
+    private void displaySettingsBorder (){
         System.out.println(
         "\t******************************************************************");
     }

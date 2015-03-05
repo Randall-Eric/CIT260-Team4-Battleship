@@ -23,7 +23,7 @@ public class AuthorCreditView {
         {"X", "Exit"}
     };
     
-    private AuthorCreditControl authorCreditControl = new AuthorCreditControl();
+    public final AuthorCreditControl authorCreditControl = new AuthorCreditControl();
   
     
     public AuthorCreditView(){

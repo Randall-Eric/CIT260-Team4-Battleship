@@ -15,10 +15,10 @@ public class Menu {
   String quitGame = "Quit Game";
 
 
-  public void welcome(){
+  private void welcome(){
           System.out.println("Welcome to Battleship");
                   }  
-  public void thankYou(){
+  private void thankYou(){
           System.out.println("Thank you for playing Battleship");
                   }
 }

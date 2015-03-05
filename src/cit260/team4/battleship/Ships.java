@@ -19,7 +19,7 @@ public class Ships {
     
   private ShipMenu shipmenu = new ShipMenu();
   
-  public Ships(){
+  private Ships(){
       for (int i=0; i<this.shipSize.length; i++){
           for (int j=0; j<this.shipLength[i]; j++){
               this.shipSize[i][j]=0;
@@ -28,13 +28,13 @@ public class Ships {
   
   }
     
-    public void showSize(){
+    private void showSize(){
         System.out.println("The ship's size is: " + size);
 }
-    public void showName(){
+    private void showName(){
         System.out.println("The ship's name is: " + name);
     }
-    public void getAccuracy(int hits, int shots){
+    private void getAccuracy(int hits, int shots){
         
         double dShots = (double) shots;
         double dHits = (double) hits;
@@ -49,7 +49,7 @@ public class Ships {
             System.out.println("\tThe Player\'s accuracy is " + accuracy + "%");
         }
     }
-    public void shipInput(){
+    private void shipInput(){
         Scanner input = new Scanner(System.in);
     try{
         int choice;
@@ -103,7 +103,7 @@ public class Ships {
     //return;
     }
     
-     public void shipStatus(){
+     private void shipStatus(){
        for(int y = 0; y<this.shipSize.length; y++){
      int sum = 0;
          for(int x: this.shipSize[y]) sum += x;
@@ -113,10 +113,10 @@ public class Ships {
          else System.out.println (this.shipTitles[y] + " is not sunk.");
        }  
    }
-    public int[] shipLength = new int[]{4,2,3,5,4};
-    public int[][] shipSize = new int[5][];
-    public String[] shipTitles = new String[] {"Battleship", "Patrol Boat", "Cruiser", "Aircraft Carrier", "Submarine"};
-    public void shipList() {
+    private final int[] shipLength = new int[]{4,2,3,5,4};
+    private final int[][] shipSize = new int[5][];
+    private final String[] shipTitles = new String[] {"Battleship", "Patrol Boat", "Cruiser", "Aircraft Carrier", "Submarine"};
+    private void shipList() {
     String[] nicknames; //= new String[5];
     nicknames = new String[5];
     Scanner input = new Scanner(System.in);
@@ -130,7 +130,7 @@ public class Ships {
         System.out.println();
         }
     }
-    public void shipAvg(){
+    private void shipAvg(){
     double numz[] = new double[5];
     double sum=0;
     double avg;

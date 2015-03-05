@@ -10,9 +10,9 @@ package cit260.team4.battleship;
  * @author Jordan Smith
  */
 public class ScoreBoard {
-    int highscore = 155;
-    int nums [] = { 100, 45, 67, - 3, 20 }; 
-    int size;
+    public static int highscore = 155;
+    public static int nums [] = { 100, 45, 67, - 3, 20 }; 
+    public static int size;
     
     public void lessonSixArray () {
                     

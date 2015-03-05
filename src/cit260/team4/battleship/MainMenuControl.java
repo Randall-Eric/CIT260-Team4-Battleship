@@ -13,13 +13,13 @@ public class MainMenuControl {
       public void welcome(){
           System.out.println("Welcome to Battleship");
                   }  
-  public void thankYou(){
+  private void thankYou(){
           System.out.println("Thank you for playing Battleship");
                   }
-  public void startNewGame(){
+  private void startNewGame(){
       System.out.println("Let the game begin!");
   }
-  public void displayHelp(){
+  private void displayHelp(){
               HelpMenuView helpMenu = new HelpMenuView();
         helpMenu.helpInput();
   }

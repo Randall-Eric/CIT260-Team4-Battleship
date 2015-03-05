@@ -34,6 +34,7 @@ public class MainMenuView {
     private final HelpMenuView HelpMenuView = new HelpMenuView();   //calls the HelpMenuView class. 
     private final ShipPlacement shipPlacement = new ShipPlacement();
     private final AuthorCreditView AuthorCreditView = new AuthorCreditView(); 
+    private final ShipBean bean = new ShipBean();
     
     public void mainMenuInput(){ //runs the corresponding letter choices listed in the String choices above.
         
@@ -58,6 +59,7 @@ public class MainMenuView {
                        //this.Ships.showSize();  //calls the showSize function from the Ships class.
                        //this.Ships.getAccuracy(5, 10);  //calls the getAccuracy function from the Ships class.
                        //this.Ships.shipAvg();
+                        
                         break;
                     case "C":
                         this.AuthorCreditView.authorInput();
@@ -91,7 +93,7 @@ public class MainMenuView {
             while (!command.equals("X")); //continues to run the main menu until X is selected to end it. 
     }
         
-    public final void display (){
+    private final void display (){
         System.out.println("\n\t************************************************************"); //decoration. 
         System.out.println("\tEnter the letter for your selection from the main menu:"); //simple output message. 
         for (String[] mainMenuItem : MainMenuView.mainMenuItems) {

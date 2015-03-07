@@ -5,6 +5,7 @@
  */
 package cit260.team4.battleship;
 
+import java.io.Serializable;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -12,9 +13,9 @@ import java.util.Scanner;
  *
  * @author christianray
  */
-public class Ships {
-    int size=4;
-    String name="Battleship"; 
+public class Ships implements Serializable {
+     static int size=4;
+    static String name="Battleship"; 
     //String battleship = "You have chosen the Battleship";
     
   private ShipMenu shipmenu = new ShipMenu();
@@ -27,7 +28,18 @@ public class Ships {
       }
   
   }
-    
+    public int getSize(){
+        return this.size;
+    }
+    public void setSize(){
+        this.size=size;
+    }
+    public String getName(){
+        return this.name;
+    }
+    public void setName(){
+        this.name=name;
+    }
     private void showSize(){
         System.out.println("The ship's size is: " + size);
 }
@@ -52,7 +64,7 @@ public class Ships {
     private void shipInput(){
         Scanner input = new Scanner(System.in);
     try{
-        int choice;
+         int choice;
         
     
              do {

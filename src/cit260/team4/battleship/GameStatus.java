@@ -12,11 +12,11 @@ import java.util.Scanner;
  * @author taylorwestmorland
  */
 public class GameStatus {
-    int hit;
-    float userInputFloat;
-    int totalSpots= 17;
-    int spotsLeft;
-    String outPutSpaces;
+    public static int hit;
+    public static float userInputFloat;
+    public static int totalSpots= 17;
+    public static int spotsLeft;
+    public static String outPutSpaces;
     
     private void spacesLeft(){
         Scanner input = new Scanner(System.in);

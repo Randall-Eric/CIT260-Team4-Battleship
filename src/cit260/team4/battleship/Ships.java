@@ -20,7 +20,7 @@ public class Ships implements Serializable {
     
   private ShipMenu shipmenu = new ShipMenu();
   
-  private Ships(){
+  public Ships(){
       for (int i=0; i<this.shipSize.length; i++){
           for (int j=0; j<this.shipLength[i]; j++){
               this.shipSize[i][j]=0;

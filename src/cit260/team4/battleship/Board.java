@@ -23,7 +23,7 @@ public class Board {
                  
      
          static int[][] board = new int[10][10]; 
-        private Board (){
+        public Board (){
             for (int j=0; j<board.length; j++) {
                 for (int c=0; c<board[j].length; c++) {
                     board[j][c]=0;

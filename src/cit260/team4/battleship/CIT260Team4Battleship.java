@@ -22,7 +22,7 @@ public class CIT260Team4Battleship {
         CIT260Team4Battleship game = new CIT260Team4Battleship(); // constructor - creates instance of class called "game"
         game.getName(); //calls the getName() method for the "game" instance of the class
         game.displayHelp(); //calls the getName() method for the "name" instance of the class
-        game.mainMenuItems();
+        game.menuItems();
 
     }
         
@@ -38,7 +38,7 @@ public class CIT260Team4Battleship {
         }        
         
         private final MainMenuView MainMenuView = new MainMenuView();
-        public void mainMenuItems () {
+        public void menuItems () {
             this.MainMenuView.mainMenuInput();
             
         }

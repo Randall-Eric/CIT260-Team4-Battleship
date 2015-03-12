@@ -9,9 +9,9 @@ import java.util.Scanner;
  *
  * @author rebecca thayne
  */
-public class MainMenuView {
+public class MainMenuView extends MenuSuperClass {
 
-    private final static String [][] mainMenuItems = {//sets up the Main MainMenuView Choices after putting name in. 
+    private final static String [][] menuItems = {//sets up the Main MainMenuView Choices after putting name in. 
         //{"A", "AI Turn"},        
         {"BS", "Browse Ships"},
         {"C", "Code Developers"},
@@ -36,6 +36,9 @@ public class MainMenuView {
     private final AuthorCreditView AuthorCreditView = new AuthorCreditView(); 
     private final ShipBean bean = new ShipBean();
     
+    public MainMenuView(){
+        super(MainMenuView.menuItems);
+    }
     public void mainMenuInput(){ //runs the corresponding letter choices listed in the String choices above.
         
             String command;
@@ -93,14 +96,6 @@ public class MainMenuView {
             while (!command.equals("X")); //continues to run the main menu until X is selected to end it. 
     }
         
-    private final void display (){
-        System.out.println("\n\t************************************************************"); //decoration. 
-        System.out.println("\tEnter the letter for your selection from the main menu:"); //simple output message. 
-        for (String[] mainMenuItem : MainMenuView.mainMenuItems) {
-            System.out.println("\t  " + mainMenuItem[0] + "\t" + mainMenuItem[1]);
-        }
-        System.out.println("\t************************************************************\n");
-    }
     
 }
   

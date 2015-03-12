@@ -11,9 +11,9 @@ import java.util.Scanner;
  *
  * @author erandall
  */
-public class HelpMenuView {
+public class HelpMenuView extends MenuSuperClass {    
     
-    private final static String [][] menuItems = {
+    public final static String [][] menuItems = {
         {"R", "Rules"},
         {"O", "Objective"},
         {"D", "Difficulty"},
@@ -25,7 +25,7 @@ public class HelpMenuView {
     private final AuthorCreditView authorCreditView = new AuthorCreditView();
     
     public HelpMenuView(){
-        
+        super(HelpMenuView.menuItems);
     }
     
     public void helpInput(){
@@ -61,13 +61,4 @@ public class HelpMenuView {
             while (!command.equals("X"));
     }
         
-    public final void display (){
-        System.out.println("\n\t************************************************************");
-        System.out.println("\tEnter the letter for your selection from the help menu:");
-        
-        for (String[] menuItem : HelpMenuView.menuItems) {
-            System.out.println("\t  " + menuItem[0] + "\t" + menuItem[1]);
-        }
-        System.out.println("\t************************************************************\n");
-    }
 }

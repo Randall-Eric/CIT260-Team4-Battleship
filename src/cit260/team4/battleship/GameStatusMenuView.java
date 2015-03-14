@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class GameStatusMenuView extends MenuSuperClass {
     
-    private final static String[][]menuItems = {
+    public final static String[][]menuItems = {
         {"S", "Game Score"},
         {"T", "Time spent on game"},
         {"CS", "Curent Settings (Takes you to the settings menu)"},

@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author taylorwestmorland
  */
-public class GameStatusMenuView {
+public class GameStatusMenuView extends MenuSuperClass {
     
     private final static String[][]menuItems = {
         {"S", "Game Score"},
@@ -23,6 +23,7 @@ public class GameStatusMenuView {
     private GameStatusMenuControl gameStatusMenuControl= new GameStatusMenuControl();
     
     public GameStatusMenuView(){
+        super(GameStatusMenuView.menuItems);
         
     }
     
@@ -59,13 +60,4 @@ public class GameStatusMenuView {
         
    } 
     
-    public final void display(){
-        System.out.println("\n\t************************************************************");
-        System.out.println("\tEnter the letter associated with one of the following commands:");
-        
-        for(int i=0; i< GameStatusMenuView.menuItems.length; i++){
-            System.out.println("\t    " + menuItems[i][0] + "\t" + menuItems[i][1]);
-        }
-        System.out.println("\t**************************************************************");
-    }
 }

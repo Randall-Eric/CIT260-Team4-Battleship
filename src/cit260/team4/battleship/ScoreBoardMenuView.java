@@ -11,12 +11,12 @@ import java.util.Scanner;
  *
  * @author Jordan
  */
-public class ScoreBoardMenuView {
+public class ScoreBoardMenuView extends MenuSuperClass {
     
 
 
     
-    private final static String [][] menuItems = {
+    public final static String [][] menuItems = {
         {"P", "Ship Point Values"},
         {"S", "Player Stats"},
         {"V", "View High Score"},
@@ -26,9 +26,10 @@ public class ScoreBoardMenuView {
     private ScoreBoardMenuControl scoreBoardMenuControl = new ScoreBoardMenuControl();
     
     public ScoreBoardMenuView(){
-        
+        super(ScoreBoardMenuView.menuItems);
     }
     
+      
     public void scoreBoardMenuInput(){
         
             String command;
@@ -58,14 +59,5 @@ public class ScoreBoardMenuView {
             } 
             while (!command.equals("X"));
     }
-        
-    private void display (){
-        System.out.println("\n\t************************************************************");
-        System.out.println("\tEnter the letter for your selection from the Score Board Menu:");
-        
-        for (String[] menuItem : ScoreBoardMenuView.menuItems) {
-            System.out.println("\t  " + menuItem[0] + "\t" + menuItem[1]);
-        }
-        System.out.println("\t************************************************************\n");
-    }
+      
 }

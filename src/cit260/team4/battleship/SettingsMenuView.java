@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author erandall
  */
-public class SettingsMenuView {
+public class SettingsMenuView extends MenuSuperClass {
     
      private final static String [][] menuItems = {
         {"D", "Set Difficulty"},
@@ -24,6 +24,7 @@ public class SettingsMenuView {
     private final SettingsMenuControl settingsMenuControl = new SettingsMenuControl();
 
     public SettingsMenuView(){
+        super(SettingsMenuView.menuItems);
         
     }
     
@@ -58,15 +59,5 @@ public class SettingsMenuView {
                 }
             } 
             while (!command.equals("X"));
-    }
-        
-    private void display (){
-        System.out.println("\n\t************************************************************");
-        System.out.println("\tEnter the letter for your selection from the help menu:");
-        
-         for (String[] menuItem : SettingsMenuView.menuItems) {
-             System.out.println("\t  " + menuItem[0] + "\t" + menuItem[1]);
-         }
-        System.out.println("\t************************************************************\n");
     }
 }

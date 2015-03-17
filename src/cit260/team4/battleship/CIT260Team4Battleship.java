@@ -5,7 +5,7 @@
  */
 package cit260.team4.battleship;
 
-import cit260.team4.battleship.Menus.MainMenuView;
+import cit260.team4.battleship.cit260group4BattleshipMenus.MainMenuView;
 import java.util.Scanner;
 
 /**

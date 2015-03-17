@@ -1,4 +1,4 @@
-package cit260.team4.battleship.Menus;
+package cit260.team4.battleship.cit260group4BattleshipMenus;
 
 import java.util.Scanner;
 

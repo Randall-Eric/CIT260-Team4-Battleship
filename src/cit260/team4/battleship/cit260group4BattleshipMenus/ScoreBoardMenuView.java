@@ -3,32 +3,34 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cit260.team4.battleship.Menus;
+package cit260.team4.battleship.cit260group4BattleshipMenus;
 
 import java.util.Scanner;
 
 /**
  *
- * @author erandall
+ * @author Jordan
  */
-public class SettingsMenuView extends MenuSuperClass {
+public class ScoreBoardMenuView extends MenuSuperClass {
     
-     private final static String [][] menuItems = {
-        {"D", "Set Difficulty"},
-        {"M", "Set Game Mode"},
-        {"H", "Enable Hints"},
-        {"T", "Total Games"},
+
+
+    
+    public final static String [][] menuItems = {
+        {"P", "Ship Point Values"},
+        {"S", "Player Stats"},
+        {"V", "View High Score"},
         {"X", "Exit"}
     };
     
-    private final SettingsMenuControl settingsMenuControl = new SettingsMenuControl();
-
-    public SettingsMenuView(){
-        super(SettingsMenuView.menuItems);
-        
+    private ScoreBoardMenuControl scoreBoardMenuControl = new ScoreBoardMenuControl();
+    
+    public ScoreBoardMenuView(){
+        super(ScoreBoardMenuView.menuItems);
     }
     
-    public void settingsInput(){
+      
+    public void scoreBoardMenuInput(){
         
             String command;
             Scanner inFile = new Scanner(System.in);
@@ -40,17 +42,14 @@ public class SettingsMenuView extends MenuSuperClass {
                 command = command.trim().toUpperCase();
                 
                 switch (command){
-                    case "D":
-                        this.settingsMenuControl.displayDifficulty();
+                    case "P":
+                        this.scoreBoardMenuControl.displayShipPointValue();
                         break;
-                    case "M":
-                        this.settingsMenuControl.displayGameMode();
+                    case "S":
+                        this.scoreBoardMenuControl.displayPlayerStats();
                         break;
-                    case "H":
-                        this.settingsMenuControl.displayHints();
-                        break;
-                    case "T":
-                        this.settingsMenuControl.gameCount();
+                    case "V":
+                        this.scoreBoardMenuControl.displayViewHighScore();
                         break;
                     case "X":
                         break;
@@ -60,4 +59,5 @@ public class SettingsMenuView extends MenuSuperClass {
             } 
             while (!command.equals("X"));
     }
+      
 }

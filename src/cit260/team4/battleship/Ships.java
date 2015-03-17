@@ -5,7 +5,7 @@
  */
 package cit260.team4.battleship;
 
-import cit260.team4.battleship.Menus.ShipMenu;
+import cit260.team4.battleship.cit260group4BattleshipMenus.ShipMenu;
 import java.io.Serializable;
 import java.util.InputMismatchException;
 import java.util.Scanner;

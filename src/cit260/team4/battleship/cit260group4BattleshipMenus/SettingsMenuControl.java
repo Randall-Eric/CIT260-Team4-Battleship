@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cit260.team4.battleship.Menus;
+package cit260.team4.battleship.cit260group4BattleshipMenus;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

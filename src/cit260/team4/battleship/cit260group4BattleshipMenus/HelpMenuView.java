@@ -3,34 +3,33 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cit260.team4.battleship.Menus;
+package cit260.team4.battleship.cit260group4BattleshipMenus;
 
+import cit260.team4.battleship.AuthorCreditView;
 import java.util.Scanner;
 
 /**
  *
- * @author Jordan
+ * @author erandall
  */
-public class ScoreBoardMenuView extends MenuSuperClass {
-    
-
-
+public class HelpMenuView extends MenuSuperClass {    
     
     public final static String [][] menuItems = {
-        {"P", "Ship Point Values"},
-        {"S", "Player Stats"},
-        {"V", "View High Score"},
+        {"R", "Rules"},
+        {"O", "Objective"},
+        {"D", "Difficulty"},
+        {"E", "Developers"},
         {"X", "Exit"}
     };
     
-    private ScoreBoardMenuControl scoreBoardMenuControl = new ScoreBoardMenuControl();
+    private final HelpMenuControl helpMenuControl = new HelpMenuControl();
+    private final AuthorCreditView authorCreditView = new AuthorCreditView();
     
-    public ScoreBoardMenuView(){
-        super(ScoreBoardMenuView.menuItems);
+    public HelpMenuView(){
+        super(HelpMenuView.menuItems);
     }
     
-      
-    public void scoreBoardMenuInput(){
+    public void helpInput(){
         
             String command;
             Scanner inFile = new Scanner(System.in);
@@ -42,14 +41,17 @@ public class ScoreBoardMenuView extends MenuSuperClass {
                 command = command.trim().toUpperCase();
                 
                 switch (command){
-                    case "P":
-                        this.scoreBoardMenuControl.displayShipPointValue();
+                    case "R":
+                        this.helpMenuControl.displayRulesHelp();
                         break;
-                    case "S":
-                        this.scoreBoardMenuControl.displayPlayerStats();
+                    case "O":
+                        this.helpMenuControl.displayObjectiveHelp();
                         break;
-                    case "V":
-                        this.scoreBoardMenuControl.displayViewHighScore();
+                    case "D":
+                        this.helpMenuControl.displayDifficultyHelp();
+                        break;
+                    case "E":
+                        this.authorCreditView.authorInput();
                         break;
                     case "X":
                         break;
@@ -59,5 +61,5 @@ public class ScoreBoardMenuView extends MenuSuperClass {
             } 
             while (!command.equals("X"));
     }
-      
+        
 }

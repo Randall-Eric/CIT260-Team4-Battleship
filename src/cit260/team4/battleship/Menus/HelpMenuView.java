@@ -3,32 +3,33 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cit260.team4.battleship;
+package cit260.team4.battleship.Menus;
 
+import cit260.team4.battleship.AuthorCreditView;
 import java.util.Scanner;
 
 /**
  *
  * @author erandall
  */
-public class SettingsMenuView extends MenuSuperClass {
+public class HelpMenuView extends MenuSuperClass {    
     
-     private final static String [][] menuItems = {
-        {"D", "Set Difficulty"},
-        {"M", "Set Game Mode"},
-        {"H", "Enable Hints"},
-        {"T", "Total Games"},
+    public final static String [][] menuItems = {
+        {"R", "Rules"},
+        {"O", "Objective"},
+        {"D", "Difficulty"},
+        {"E", "Developers"},
         {"X", "Exit"}
     };
     
-    private final SettingsMenuControl settingsMenuControl = new SettingsMenuControl();
-
-    public SettingsMenuView(){
-        super(SettingsMenuView.menuItems);
-        
+    private final HelpMenuControl helpMenuControl = new HelpMenuControl();
+    private final AuthorCreditView authorCreditView = new AuthorCreditView();
+    
+    public HelpMenuView(){
+        super(HelpMenuView.menuItems);
     }
     
-    public void settingsInput(){
+    public void helpInput(){
         
             String command;
             Scanner inFile = new Scanner(System.in);
@@ -40,17 +41,17 @@ public class SettingsMenuView extends MenuSuperClass {
                 command = command.trim().toUpperCase();
                 
                 switch (command){
+                    case "R":
+                        this.helpMenuControl.displayRulesHelp();
+                        break;
+                    case "O":
+                        this.helpMenuControl.displayObjectiveHelp();
+                        break;
                     case "D":
-                        this.settingsMenuControl.displayDifficulty();
+                        this.helpMenuControl.displayDifficultyHelp();
                         break;
-                    case "M":
-                        this.settingsMenuControl.displayGameMode();
-                        break;
-                    case "H":
-                        this.settingsMenuControl.displayHints();
-                        break;
-                    case "T":
-                        this.settingsMenuControl.gameCount();
+                    case "E":
+                        this.authorCreditView.authorInput();
                         break;
                     case "X":
                         break;
@@ -60,4 +61,5 @@ public class SettingsMenuView extends MenuSuperClass {
             } 
             while (!command.equals("X"));
     }
+        
 }

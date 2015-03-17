@@ -3,7 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cit260.team4.battleship;
+package cit260.team4.battleship.Menus;
+import cit260.team4.battleship.AuthorCreditView;
+import cit260.team4.battleship.Gameplay;
+import cit260.team4.battleship.ScoreBoard;
+import cit260.team4.battleship.ShipPlacement;
 import java.util.Scanner;
 /**
  *

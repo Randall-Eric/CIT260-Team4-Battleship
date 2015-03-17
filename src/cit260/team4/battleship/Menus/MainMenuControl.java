@@ -3,22 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cit260.team4.battleship;
+package cit260.team4.battleship.Menus;
 
 /**
  *
- * @author rebecca thayne
+ * @author thayne66
  */
-public class Menu {
-  String newGame ="New Game";
-  String howToPlay = "How to Play";
-  String quitGame = "Quit Game";
-
-
-  private void welcome(){
+public class MainMenuControl {
+      public void welcome(){
           System.out.println("Welcome to Battleship");
                   }  
   private void thankYou(){
           System.out.println("Thank you for playing Battleship");
                   }
+  private void startNewGame(){
+      System.out.println("Let the game begin!");
+  }
+  private void displayHelp(){
+              HelpMenuView helpMenu = new HelpMenuView();
+        helpMenu.helpInput();
+  }
 }

@@ -6,13 +6,13 @@
 package cit260.team4.battleship.cit260group4BattleshipMenus;
 
 import cit260.team4.battleship.AuthorCreditView;
+import cit260.team4.battleship.EnterInfo;
 import java.util.Scanner;
-
 /**
  *
  * @author erandall
  */
-public class HelpMenuView extends MenuSuperClass {    
+public class HelpMenuView extends MenuSuperClass implements EnterInfo{    
     
     public final static String [][] menuItems = {
         {"R", "Rules"},
@@ -25,20 +25,23 @@ public class HelpMenuView extends MenuSuperClass {
     private final HelpMenuControl helpMenuControl = new HelpMenuControl();
     private final AuthorCreditView authorCreditView = new AuthorCreditView();
     
+       
+    
     public HelpMenuView(){
         super(HelpMenuView.menuItems);
     }
     
-    public void helpInput(){
-        
-            String command;
+    @Override
+    public String getInput(Object object){
+        String command;
             Scanner inFile = new Scanner(System.in);
             
             do{
                 this.display();
                 
                 command = inFile.nextLine();
-                command = command.trim().toUpperCase();
+                command = command.trim().toUpperCase(); //changes input to always be uppercase, in case someone inputs a lowercase letter. 
+                
                 
                 switch (command){
                     case "R":
@@ -60,6 +63,7 @@ public class HelpMenuView extends MenuSuperClass {
                 }
             } 
             while (!command.equals("X"));
+            return command;
     }
         
 }

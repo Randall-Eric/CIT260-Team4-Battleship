@@ -11,4 +11,5 @@ package cit260.team4.battleship;
  */
 public interface DisplayInfo {
     
+    Object display(Object object);
 }

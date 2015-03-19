@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 package cit260.team4.battleship.cit260group4BattleshipMenus;
-
+import java.util.Scanner;
 /**
  *
  * @author taylorwestmorland
  */
-public abstract class MenuSuperClass {
+public class MenuSuperClass {
     
     private String [][] menuItems=null;
     
@@ -28,5 +28,15 @@ public abstract class MenuSuperClass {
             System.out.println("\t  " + menuItems[i][0] + "\t" + menuItems[i][1]);
         }
         System.out.println("\t************************************************************\n");
+}
+    
+    protected final String getCommand() {
+        Scanner inFile = new Scanner(System.in);
+        String command;
+          
+            command = inFile.nextLine();
+            command = command.trim().toUpperCase();
+        return command;
+     
 }
 }

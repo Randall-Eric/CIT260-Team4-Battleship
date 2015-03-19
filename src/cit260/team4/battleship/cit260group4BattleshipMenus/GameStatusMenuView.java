@@ -40,15 +40,16 @@ public class GameStatusMenuView extends MenuSuperClass {
             
             switch(command){
                 case "S":
-                    this.gameStatusMenuControl.displayGameScoreHelp();
+                    System.out.println("The current score of the game is.");
                     break;
                 case "T":
-                    this.gameStatusMenuControl.displayTimeOfGameHelp();
+                    System.out.println("This game has been going for ____ minutes.");
                     break;
                 case "CS":
-                    this.gameStatusMenuControl.displayCurrentHelp();
+                    System.out.println("Here are the current settings that you have for this game.");;
                     break;
                 case "X":
+                    System.out.println("You are exiting the game");
                     break;
                 default:
                     System.out.println("Invalid command. Please try again.");

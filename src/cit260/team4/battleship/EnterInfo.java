@@ -10,5 +10,6 @@ package cit260.team4.battleship;
  * @author dbanks
  */
 public interface EnterInfo {
+    Object getInput(Object object);
     
 }

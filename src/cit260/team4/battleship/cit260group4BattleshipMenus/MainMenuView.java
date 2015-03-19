@@ -9,11 +9,12 @@ import cit260.team4.battleship.Gameplay;
 import cit260.team4.battleship.ScoreBoard;
 import cit260.team4.battleship.ShipPlacement;
 import java.util.Scanner;
+import cit260.team4.battleship.EnterInfo;
 /**
  *
  * @author rebecca thayne
  */
-public class MainMenuView extends MenuSuperClass {
+public class MainMenuView extends MenuSuperClass implements EnterInfo{
 
     private final static String [][] menuItems = {//sets up the Main MainMenuView Choices after putting name in. 
         //{"A", "AI Turn"},        
@@ -43,7 +44,10 @@ public class MainMenuView extends MenuSuperClass {
     public MainMenuView(){
         super(MainMenuView.menuItems);
     }
-    public void mainMenuInput(){ //runs the corresponding letter choices listed in the String choices above.
+    
+ 
+    @Override
+    public String getInput(Object object){ //runs the corresponding letter choices listed in the String choices above.
         
             String command;
             Scanner inFile = new Scanner(System.in);
@@ -89,7 +93,7 @@ public class MainMenuView extends MenuSuperClass {
                         this.settingsMenuView.settingsInput(); //calls the SettingsMenuView class
                         break;
                     case ("H"):
-                        this.HelpMenuView.helpInput(); //calls the helpInput function from the HelpMenuView class.
+                        this.HelpMenuView.getInput(null); //calls the helpInput function from the HelpMenuView class.
                         break;
                     case "X":  //breaks from the options menu. 
                         break;
@@ -98,6 +102,7 @@ public class MainMenuView extends MenuSuperClass {
                 }
             } 
             while (!command.equals("X")); //continues to run the main menu until X is selected to end it. 
+    return command;
     }
         
     

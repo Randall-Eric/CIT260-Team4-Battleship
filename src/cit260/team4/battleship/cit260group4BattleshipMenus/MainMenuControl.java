@@ -21,6 +21,6 @@ public class MainMenuControl {
   }
   private void displayHelp(){
               HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.helpInput();
+        helpMenu.getInput(null);
   }
 }

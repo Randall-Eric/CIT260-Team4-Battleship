@@ -6,25 +6,38 @@
 package cit260.team4.battleship;
 
 import java.util.Scanner;
+import java.util.Random;
+import java.io.Serializable;
 /**
  *
  * @author Matthew
  */
-public class ShipPlacement {
-        
+public class ShipPlacement implements Serializable {
+    
+    public ShipPlacement() {
+    
+    }
+    
     int column;
     int row;
     String direction;
     String ships[] = {
             "Carrier", "Battleship", "Submarine", "Destroyer", "Patrol"
     };
-    //This is the array that has all values for the player slected ship locations
-    int shipTable[][] = new int[5][];{
+    public int shipTable[][] = new int[5][];{
     shipTable[0] = new int[5];
     shipTable[1] = new int[4];
     shipTable[2] = new int[3];
     shipTable[3] = new int[3];
     shipTable[4] = new int[2];
+    }
+    
+    public int aiShipTable[][] = new int [5][];{
+    aiShipTable[0] = new int[5];
+    aiShipTable[1] = new int[4];
+    aiShipTable[2] = new int[3];
+    aiShipTable[3] = new int[3];
+    aiShipTable[4] = new int[2];
     }
       
     public void shipPlacement() {
@@ -34,8 +47,7 @@ public class ShipPlacement {
     int i = 0;
         
     while (i < 5) 
-        one: 
-        {   
+        one: {   
     
         Scanner input = new Scanner(System.in);
         System.out.println("\n");
@@ -56,8 +68,8 @@ public class ShipPlacement {
         int shipOccupiedSpace[] = shipDirection(direction, column, row, extension); //calls function to add or subtract for direction of ship
         
         for(int x: shipOccupiedSpace){
-                if (x <= 100 && x >= 11)
-                for(int y[]: shipTable) //This compares the ship against all other already placed ships.
+                if (x <= 100 && x >= 11){
+                for(int y[]: shipTable){
                     for(int z: y){
                         if (z != x){
                            continue;
@@ -67,8 +79,8 @@ public class ShipPlacement {
                             break one;
                         }
                     }
-                   
-            
+                }   
+            }
                 else{
                     System.out.print("\nSelection is out of board boundaries.\n");
                     break one;
@@ -80,26 +92,72 @@ public class ShipPlacement {
                 i++;
     }
     
-    System.out.print("Ships placed. Get ready for the game!!!\n");
-    
     }
-    
-    //This is for the weekly assignment
-    public void shipMaximum(){
-        int largest = shipTable[0][0];
-        for(int y[]: shipTable){
+   
+   //Populates the computer's ship table
+   public void aiShipPlacement() {
+       
+       int i = 0;
+       
+       while (i < 5) 
+           
+           one:
+           {
+           Random randColumn = new Random();
+           Random randRow = new Random();
+           Random randDirection = new Random();
+           column = randColumn.nextInt((10 - 1) + 1) + 1;
+           row = randRow.nextInt((10 - 1) + 1) + 1;
+           row = row * 10;
+           int directionValue = randDirection.nextInt((4 - 1) + 1) + 1;
+           
+                switch(directionValue) {
+                    case 1:
+                        direction = "UP";
+                        break;
+                    case 2:
+                        direction = "DOWN";
+                        break;
+                    case 3:
+                        direction = "LEFT";
+                        break;
+                    default:
+                        direction = "RIGHT";
+                        break;   
+                }
+                
+           int extension = shipExtension(i);
+           int shipOccupiedSpace[] = shipDirection(direction, column, row, extension);
+           
+           for(int x: shipOccupiedSpace){
+                if (x <= 100 && x >= 11){
+                for(int y[]: shipTable){
                     for(int z: y){
-                        if(largest > z){
-                            largest = z;
-                            System.out.print("The largest value for a ship is " + largest);
+                        if (z != x){
+                           continue;
+                        }
+                        else{
+                            break one;
                         }
                     }
+                }   
+            }
+                else{
+                    break one;
+                }
+
         }
-    }
-  
+                System.out.print("\nEnemy " + ships[i] + " placed.\n");
+                aiShipTable[i] = shipOccupiedSpace;
+                i++; 
+       }
+   
+       System.out.print("\nAll ships placed. Get ready for the game!!!\n");
+       
+   }
     
    //Function to get full number of spaces occupied by each ship 
-   public int shipExtension(int ship) {
+   private int shipExtension(int ship) {
        
        int ext;        
                
@@ -124,7 +182,7 @@ public class ShipPlacement {
    } 
    
    //Function to convert column letter to number.
-   public int columnValue (String column){
+   private int columnValue (String column){
        
        int value;
        
@@ -167,7 +225,7 @@ public class ShipPlacement {
    }
    
    //Adds or subtracts to row or column depending on ship direction
-   public int[] shipDirection(String direction, int column, int row, int ext) {
+   private int[] shipDirection(String direction, int column, int row, int ext) {
        
        int shipSpaces[] = new int[ext + 1];
        int i;

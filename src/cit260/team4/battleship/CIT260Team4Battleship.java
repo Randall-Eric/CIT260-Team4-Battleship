@@ -40,7 +40,7 @@ public class CIT260Team4Battleship {
         
         private final MainMenuView MainMenuView = new MainMenuView();
         public void menuItems () {
-            this.MainMenuView.mainMenuInput();
+            this.MainMenuView.getInput(null);
             
         }
         

@@ -12,7 +12,7 @@ import java.util.Scanner;
  *
  * @author erandall
  */
-public class CIT260Team4Battleship {
+public class CIT260Team4Battleship{
 
     
     String firstName;//enter player first name
@@ -45,9 +45,6 @@ public class CIT260Team4Battleship {
         }
         
 }
-            
-
-
 
 /**
         private final static String [][] mainMenuItems = {//sets up the Main MainMenuView Choices after putting name in. 

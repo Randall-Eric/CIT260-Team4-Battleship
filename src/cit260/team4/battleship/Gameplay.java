@@ -104,9 +104,9 @@ private void exit (){
       for( String name : names ) {
          System.out.print( name );
 
-      }
    }
-    }
+  }
+ }
 }
 
 /*

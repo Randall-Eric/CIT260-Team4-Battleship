@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cit260.team4.battleship;
+package cit260.team4.battleship.interfaces;
 
 /**
  *
  * @author dbanks
  */
-public interface DisplayInfo {
+public interface EnterInfo {
+    String getInput(Object object);
     
-    Object display(Object object);
 }

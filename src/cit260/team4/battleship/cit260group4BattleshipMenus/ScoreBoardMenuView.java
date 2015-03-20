@@ -5,13 +5,14 @@
  */
 package cit260.team4.battleship.cit260group4BattleshipMenus;
 
+import cit260.team4.battleship.interfaces.EnterInfo;
 import java.util.Scanner;
-
+import cit260.team4.battleship.Status;
 /**
  *
  * @author Jordan
  */
-public class ScoreBoardMenuView extends MenuSuperClass {
+public class ScoreBoardMenuView extends MenuSuperClass implements EnterInfo{
     
 
 
@@ -29,8 +30,11 @@ public class ScoreBoardMenuView extends MenuSuperClass {
         super(ScoreBoardMenuView.menuItems);
     }
     
-      
-    public void scoreBoardMenuInput(){
+   
+    
+    
+   
+    public String getInput(Object object){
         
             String command;
             Scanner inFile = new Scanner(System.in);
@@ -58,6 +62,7 @@ public class ScoreBoardMenuView extends MenuSuperClass {
                 }
             } 
             while (!command.equals("X"));
+            return(command);
     }
       
 }

@@ -9,7 +9,7 @@ import cit260.team4.battleship.Gameplay;
 import cit260.team4.battleship.ScoreBoard;
 import cit260.team4.battleship.ShipPlacement;
 import java.util.Scanner;
-import cit260.team4.battleship.EnterInfo;
+import cit260.team4.battleship.interfaces.EnterInfo;
 /**
  *
  * @author rebecca thayne
@@ -79,7 +79,7 @@ public class MainMenuView extends MenuSuperClass implements EnterInfo{
                         this.ScoreBoard.lessonSixindividual();
                         this.ScoreBoard.lessonSixArray();
                         this.ScoreBoard.lessonSixArrayPrnt();
-                        this.ScoreBoardMenuView.scoreBoardMenuInput();
+                        this.ScoreBoardMenuView.getInput(null);
                         this.ScoreBoard.showHighScore(); //calls the showHighScore function from the ScoreBoard class.
                         this.ScoreBoard.scoreStats(); //calls the showStats function from the ScoreBoard class.
                         break;

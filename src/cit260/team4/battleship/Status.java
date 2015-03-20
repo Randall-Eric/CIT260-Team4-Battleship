@@ -13,7 +13,9 @@ public enum Status {
     S ("The current score of the game is."),
     T ("This game has been going for ____ minutes."),
     CS ("Here are the current settings that you have for this game."),
-    X ("You are exiting the game");
+    X ("Exiting"),
+    P ("Ship Point Values"),
+    V ("View High Score");
     
     String message;
     

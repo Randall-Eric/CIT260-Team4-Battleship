@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cit260.team4.battleship;
+package cit260.team4.battleship.interfaces;
 
 /**
  *
- * @author thayne66
+ * @author Matthew
  */
-public enum ShipTypeEnum {
-    BATTLESHIP, PATROL_BOAT, CRUISER, AIRCRAFT_CARRIER, SUBMARINE 
+public interface Turn {
+    
 }

@@ -7,7 +7,7 @@ package cit260.team4.battleship.cit260group4BattleshipMenus;
 import cit260.team4.battleship.creatorinfo.AuthorCreditView;
 import cit260.team4.battleship.Gameplay;
 import cit260.team4.battleship.ScoreBoard;
-import cit260.team4.battleship.ShipPlacement;
+import cit260.team4.battleship.ships.ShipPlacement;
 import java.util.Scanner;
 import cit260.team4.battleship.interfaces.EnterInfo;
 /**

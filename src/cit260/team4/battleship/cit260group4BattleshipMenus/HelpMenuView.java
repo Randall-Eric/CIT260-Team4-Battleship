@@ -5,7 +5,7 @@
  */
 package cit260.team4.battleship.cit260group4BattleshipMenus;
 
-import cit260.team4.battleship.AuthorCreditView;
+import cit260.team4.battleship.creatorinfo.AuthorCreditView;
 import cit260.team4.battleship.interfaces.EnterInfo;
 import java.util.Scanner;
 /**

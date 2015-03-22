@@ -7,7 +7,7 @@ package cit260.team4.battleship;
 
 /**
  *
- * @author urander
+ * @author erandall
  */
 public enum SettingsEnum {
     G("Gamemode is set to normal"),

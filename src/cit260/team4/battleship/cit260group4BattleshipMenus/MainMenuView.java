@@ -7,7 +7,6 @@ package cit260.team4.battleship.cit260group4BattleshipMenus;
 import cit260.team4.battleship.creatorinfo.AuthorCreditView;
 import cit260.team4.battleship.Gameplay;
 import cit260.team4.battleship.ScoreBoard;
-import cit260.team4.battleship.ExceptionClasses.MenuException;
 import cit260.team4.battleship.ships.ShipPlacement;
 import java.util.Scanner;
 import cit260.team4.battleship.interfaces.EnterInfo;
@@ -40,7 +39,6 @@ public class MainMenuView extends MenuSuperClass implements EnterInfo{
     private final SettingsMenuView settingsMenuView = new SettingsMenuView();               //calls the Settings Menu class. 
     private final HelpMenuView HelpMenuView = new HelpMenuView();   //calls the HelpMenuView class. 
     private final ShipPlacement shipPlacement = new ShipPlacement();
-    private final MenuException MenuException = new MenuException();
     private final AuthorCreditView AuthorCreditView = new AuthorCreditView(); 
     private final ShipBean bean = new ShipBean();
     
@@ -77,10 +75,6 @@ public class MainMenuView extends MenuSuperClass implements EnterInfo{
                         break;
                     case "C":
                         this.AuthorCreditView.authorInput();
-                        break;
-                    case 
-                         "E":
-                        this.MenuException.main(); 
                         break;
                     case "D":
                         this.ScoreBoard.lessonSixindividual();

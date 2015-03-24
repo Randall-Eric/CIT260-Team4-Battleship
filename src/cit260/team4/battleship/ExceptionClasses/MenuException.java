@@ -16,8 +16,6 @@ public class MenuException {
 try {
     
     System.out.println("Before exception is generated.");
-    
-    System.out.println("this won't be displayed"); 
 }
 catch (Exception exe){
     

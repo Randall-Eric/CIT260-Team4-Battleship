@@ -21,7 +21,6 @@ public class MainMenuView extends MenuSuperClass implements EnterInfo{
         //{"A", "AI Turn"},        
         {"BS", "Browse Ships"},
         {"C", "Code Developers"},
-        {"E", "Exception"},
         {"D", "Decorated Veterans"},
         {"M", "Main Menu Options"},
         {"P", "Play Game"},
@@ -86,12 +85,9 @@ public class MainMenuView extends MenuSuperClass implements EnterInfo{
                         this.ScoreBoard.showHighScore(); //calls the showHighScore function from the ScoreBoard class.
                         this.ScoreBoard.scoreStats(); //calls the showStats function from the ScoreBoard class.
                         break;
-                    case "E":
-                        this.MenuException.main(); 
-                        this.Gameplay.gameExit();
                     case "P":
                         this.Gameplay.playerNames(); 
-                        this.shipPlacement.shipPlacement();
+                        ShipPlacement.shipPlacement();
                         this.Gameplay.playGame(); //calls the hitOrMiss function from the Gameplay class.
                         this.Gameplay.gameExit(); //calls the gameExit function from the Gameplay class.
                         break;    
@@ -104,7 +100,7 @@ public class MainMenuView extends MenuSuperClass implements EnterInfo{
                     case "X":  //breaks from the options menu. 
                         break;
                     default:
-                        System.out.println("Invalid Choice. Please select another option.");  //pints out an error when one of the above listed options is not selected. 
+                        System.out.getClass(MenuException);  //pints out an error when one of the above listed options is not selected. 
                 }
             } 
             while (!command.equals("X")); //continues to run the main menu until X is selected to end it. 

@@ -8,6 +8,7 @@ package cit260.team4.battleship.ships;
 import java.util.Scanner;
 import java.util.Random;
 import java.io.Serializable;
+import cit260.team4.battleship.ExceptionClasses.MenuException;
 /**
  *
  * @author Matthew
@@ -37,9 +38,7 @@ public class ShipPlacement implements Serializable {
     }
       
     public static void shipPlacement() {
-    
-    
-    
+     
     int i = 0;
         
     while (i < 5) 

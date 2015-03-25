@@ -12,24 +12,19 @@ import cit260.team4.battleship.ships.ShipPlacement;
  */
 public class MenuException {
 
-    public void main (){
- int nums[] = new int [4]; 
- 
- try{
-     System.out.println("Before exceitption is generated.");
-     
-     nums[7] = 10; 
-     System.out.println ("this won't be displayed"); 
+public void placeOccupied (String args[]) {
+    try {
+        ShipPlacement.shipPlacement(); 
     }
- 
- catch (ArrayIndexOutOfBoundsException exc){
-     System.out.println ("Index out-of-bounds!");
-     
-     System.out.println ("After catch statement. ");
-       }
+    
+    catch (ArrayIndexOutOfBoundsException exc) {
+        System.out.println("\nSelection already taken by other ship.\n");
     }
+    
 
-public void shipPlacement (String args[]) {
+  }
+    
+    public static void shipPlacement () {
     try {
         ShipPlacement.shipPlacement(); 
     }

@@ -14,10 +14,6 @@ import java.io.Serializable;
  */
 public class ShipPlacement implements Serializable {
     
-    public ShipPlacement() {
-    
-    }
-    
     static int column;
     static int row;
     static String direction;

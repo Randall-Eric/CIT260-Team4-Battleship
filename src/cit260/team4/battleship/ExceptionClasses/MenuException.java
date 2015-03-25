@@ -29,7 +29,7 @@ public class MenuException {
        }
     }
 
-public void ships (String args[]) {
+public void shipPlacement (String args[]) {
     try {
         ShipPlacement.shipPlacement(); 
     }
@@ -39,6 +39,5 @@ public void ships (String args[]) {
     }
     
 
-}
-
+  }
 }

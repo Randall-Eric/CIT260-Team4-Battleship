@@ -100,7 +100,7 @@ public class MainMenuView extends MenuSuperClass implements EnterInfo{
                     case "X":  //breaks from the options menu. 
                         break;
                     default:
-                        System.out.getClass(MenuException);  //pints out an error when one of the above listed options is not selected. 
+                        System.out.println("Invalid Selection!");  //pints out an error when one of the above listed options is not selected. 
                 }
             } 
             while (!command.equals("X")); //continues to run the main menu until X is selected to end it. 

@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package cit260.team4.battleship.ExceptionClasses;
+import cit260.team4.battleship.ships.ShipPlacement; 
 
 /**
  *
@@ -27,4 +28,17 @@ public class MenuException {
      System.out.println ("After catch statement. ");
        }
     }
- }
+
+public void ships (String args[]) {
+    try {
+        ShipPlacement.shipPlacement(); 
+    }
+    
+    catch (ArrayIndexOutOfBoundsException exc) {
+        System.out.println("Out of Bounds!");
+    }
+    
+
+}
+
+}

@@ -18,13 +18,13 @@ public class ShipPlacement implements Serializable {
     
     }
     
-    int column;
-    int row;
-    String direction;
-    String ships[] = {
+    static int column;
+    static int row;
+    static String direction;
+    static String ships[] = {
             "Carrier", "Battleship", "Submarine", "Destroyer", "Patrol"
     };
-    public int shipTable[][] = new int[5][];{
+    public static int shipTable[][] = new int[5][];{
     shipTable[0] = new int[5];
     shipTable[1] = new int[4];
     shipTable[2] = new int[3];
@@ -32,7 +32,7 @@ public class ShipPlacement implements Serializable {
     shipTable[4] = new int[2];
     }
     
-    public int aiShipTable[][] = new int [5][];{
+    public static int aiShipTable[][] = new int [5][];{
     aiShipTable[0] = new int[5];
     aiShipTable[1] = new int[4];
     aiShipTable[2] = new int[3];
@@ -40,7 +40,7 @@ public class ShipPlacement implements Serializable {
     aiShipTable[4] = new int[2];
     }
       
-    public void shipPlacement() {
+    public static void shipPlacement() {
     
     
     
@@ -157,7 +157,7 @@ public class ShipPlacement implements Serializable {
    }
     
    //Function to get full number of spaces occupied by each ship 
-   private int shipExtension(int ship) {
+   private static int shipExtension(int ship) {
        
        int ext;        
                
@@ -182,7 +182,7 @@ public class ShipPlacement implements Serializable {
    } 
    
    //Function to convert column letter to number.
-   private int columnValue (String column){
+   private static int columnValue (String column){
        
        int value;
        
@@ -225,7 +225,7 @@ public class ShipPlacement implements Serializable {
    }
    
    //Adds or subtracts to row or column depending on ship direction
-   private int[] shipDirection(String direction, int column, int row, int ext) {
+   private static int[] shipDirection(String direction, int column, int row, int ext) {
        
        int shipSpaces[] = new int[ext + 1];
        int i;

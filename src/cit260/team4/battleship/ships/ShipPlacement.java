@@ -95,7 +95,7 @@ public class ShipPlacement implements Serializable {
     }
    
    //Populates the computer's ship table
-   public void aiShipPlacement() {
+   public static void aiShipPlacement() {
        
        int i = 0;
        

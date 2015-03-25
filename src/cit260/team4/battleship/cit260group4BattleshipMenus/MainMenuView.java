@@ -10,6 +10,7 @@ import cit260.team4.battleship.ScoreBoard;
 import cit260.team4.battleship.ships.ShipPlacement;
 import java.util.Scanner;
 import cit260.team4.battleship.interfaces.EnterInfo;
+import cit260.team4.battleship.ExceptionClasses.MenuException;
 /**
  *
  * @author rebecca thayne
@@ -41,6 +42,7 @@ public class MainMenuView extends MenuSuperClass implements EnterInfo{
     private final ShipPlacement shipPlacement = new ShipPlacement();
     private final AuthorCreditView AuthorCreditView = new AuthorCreditView(); 
     private final ShipBean bean = new ShipBean();
+    private final MenuException MenuException = new MenuException(); 
     
     public MainMenuView(){
         super(MainMenuView.menuItems);
@@ -84,6 +86,9 @@ public class MainMenuView extends MenuSuperClass implements EnterInfo{
                         this.ScoreBoard.showHighScore(); //calls the showHighScore function from the ScoreBoard class.
                         this.ScoreBoard.scoreStats(); //calls the showStats function from the ScoreBoard class.
                         break;
+                    case "E":
+                        this.MenuException.main(); 
+                        this.Gameplay.gameExit();
                     case "P":
                         this.Gameplay.playerNames(); 
                         this.shipPlacement.shipPlacement();

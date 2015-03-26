@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package cit260.team4.battleship.ExceptionClasses;
-import cit260.team4.battleship.ships.ShipPlacement; 
+import cit260.team4.battleship.ships.ShipPlacement;
 
 /**
  *
@@ -20,7 +20,9 @@ public void placeOccupied (String args[]) {
     catch (ArrayIndexOutOfBoundsException exc) {
         System.out.println("\nSelection already taken by other ship.\n");
     }
-    
+    finally {
+        System.exit(1);
+    }
 
   }
     
@@ -32,7 +34,9 @@ public void placeOccupied (String args[]) {
     catch (ArrayIndexOutOfBoundsException exc) {
         System.out.println("Out of Bounds!");
     }
-    
+    finally {
+        System.exit(1);
+    }
 
   }
 }

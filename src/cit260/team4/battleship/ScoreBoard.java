@@ -13,7 +13,7 @@ public class ScoreBoard {
     public static int highscore = 155;
     public static int nums [] = { 100, 45, 67, - 3, 20 }; 
     public static int size;
-    
+/*    
     public void lessonSixArray () {
                     
         int a, b, t; 
@@ -54,7 +54,7 @@ public class ScoreBoard {
     
     
     
-    
+ */   
     
     public void showHighScore(){
         System.out.println("The high score for this game is: " + highscore);
@@ -63,7 +63,7 @@ public class ScoreBoard {
       
         
     
-    public void scoreStats (){
+    public static void scoreStats (){
         int sum = 0, hitPoint = 5, userhighscore = 125, totalPointsPossible = 0;
         int ships;
         float s;

@@ -31,7 +31,7 @@ public class Board {
             }
      
         }
-        private void displayGameboard() {
+        public void displayGameboard() {
             int k;
             String columns[]={"A","B","C","D","E","F","G","H","I","J"};
             for (int j=0; j<board.length; j++){

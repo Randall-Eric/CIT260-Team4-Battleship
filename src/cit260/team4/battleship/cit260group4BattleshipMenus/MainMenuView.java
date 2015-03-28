@@ -78,9 +78,6 @@ public class MainMenuView extends MenuSuperClass implements EnterInfo{
                         this.AuthorCreditView.authorInput();
                         break;
                     case "D":
-                        this.ScoreBoard.lessonSixindividual();
-                        this.ScoreBoard.lessonSixArray();
-                        this.ScoreBoard.lessonSixArrayPrnt();
                         this.ScoreBoardMenuView.getInput(null);
                         this.ScoreBoard.showHighScore(); //calls the showHighScore function from the ScoreBoard class.
                         this.ScoreBoard.scoreStats(); //calls the showStats function from the ScoreBoard class.

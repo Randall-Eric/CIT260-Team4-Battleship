@@ -7,6 +7,7 @@ package cit260.team4.battleship;
 
 import java.util.Scanner;
 import java.io.Serializable;
+import cit260.team4.battleship.ExceptionClasses.IncorrectSelectionException;
 
 /**
  *
@@ -47,15 +48,19 @@ LEGACY CODE:
         Scanner kb = new Scanner(System.in);
         System.out.print("Enter your move: ");
         moves = kb.nextLine(); 
-        
+    try{    
         if (!moves.equals(movesary))
         {
-            returnOutput = ("Incorrect, please try again!!"); 
+            throw new IncorrectSelectionException(); 
         }
         else {
             returnOutput = "Hit!";
             moves = kb.nextLine();
         }
+    }
+    catch (IncorrectSelectionException exc){
+        System.out.println("Incorrect, please try again.");
+    }
 }
     
     

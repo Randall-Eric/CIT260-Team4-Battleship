@@ -18,7 +18,7 @@ public class GameStatus {
     public static int spotsLeft;
     public static String outPutSpaces;
     
-    private void spacesLeft(){
+    public static void spacesLeft(){
         Scanner input = new Scanner(System.in);
         System.out.println("How many spots did you hit of your oppornet on your last turn?");
         userInputFloat = input.nextFloat();

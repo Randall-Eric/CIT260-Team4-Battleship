@@ -11,6 +11,7 @@ import cit260.team4.battleship.ships.ShipPlacement;
 import java.util.Scanner;
 import cit260.team4.battleship.interfaces.EnterInfo;
 import cit260.team4.battleship.ExceptionClasses.MenuException;
+import cit260.team4.battleship.MainClass; 
 /**
  *
  * @author rebecca thayne
@@ -42,6 +43,7 @@ public class MainMenuView extends MenuSuperClass implements EnterInfo{
     private final AuthorCreditView AuthorCreditView = new AuthorCreditView(); 
     private final ShipBean bean = new ShipBean();
     private final MenuException MenuException = new MenuException(); 
+    private final MainClass MainClass = new MainClass(); 
     
     public MainMenuView(){
         super(MainMenuView.menuItems);

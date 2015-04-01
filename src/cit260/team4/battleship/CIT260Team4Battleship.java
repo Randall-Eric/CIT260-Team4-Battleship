@@ -7,6 +7,7 @@ package cit260.team4.battleship;
 
 import cit260.team4.battleship.cit260group4BattleshipMenus.MainMenuView;
 import java.util.Scanner;
+import cit260.team4.battleship.MainClass;  
 
 /**
  *
@@ -17,10 +18,10 @@ public class CIT260Team4Battleship{
     
     String firstName;//enter player first name
     String description = "This is the battleship game. Enjoy!!";// a description of the game
-      
-       
-   public static void main(String[] args) {
-        CIT260Team4Battleship game = new CIT260Team4Battleship(); // constructor - creates instance of class called "game"
+    
+    public static void main(String[] args) {
+        
+       CIT260Team4Battleship game = new CIT260Team4Battleship(); // constructor - creates instance of class called "game"
         game.getName(); //calls the getName() method for the "game" instance of the class
         game.displayHelp(); //calls the getName() method for the "name" instance of the class
         game.menuItems();

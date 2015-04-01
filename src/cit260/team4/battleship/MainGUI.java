@@ -11,12 +11,12 @@ import cit260.team4.battleship.CIT260Team4Battleship;
  *
  * @author dbanks
  */
-public class MainClass extends javax.swing.JPanel {
+public class MainGUI extends javax.swing.JPanel {
 
     /**
      * Creates new form MainClass
      */
-    public MainClass() {
+    public MainGUI() {
         initComponents();
         
     }

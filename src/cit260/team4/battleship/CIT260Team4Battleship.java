@@ -2,13 +2,14 @@ package cit260.team4.battleship;
 
 import cit260.team4.battleship.cit260group4BattleshipMenus.MainMenuView;
 import java.util.Scanner;
-import cit260.team4.battleship.MainGUI;  
+import cit260.team4.battleship.frames.MainFrame;  
 
 /**
  *
  * @author erandall
  */
 public class CIT260Team4Battleship{
+    private static MainFrame mainFrame;
 
     
     String firstName;//enter player first name
@@ -17,9 +18,17 @@ public class CIT260Team4Battleship{
     public static void main(String[] args) {
         
        CIT260Team4Battleship game = new CIT260Team4Battleship(); // constructor - creates instance of class called "game"
-        game.getName(); //calls the getName() method for the "game" instance of the class
+        /**game.getName(); //calls the getName() method for the "game" instance of the class
         game.displayHelp(); //calls the getName() method for the "name" instance of the class
-        game.menuItems();
+        game.menuItems();*/
+        
+        
+        java.awt.EventQueue.invokeLater(new Runnable(){
+        public void run(){
+            CIT260Team4Battleship.mainFrame = new MainFrame();
+            CIT260Team4Battleship.mainFrame.setVisible(true);
+        }
+    });
 
     }
         

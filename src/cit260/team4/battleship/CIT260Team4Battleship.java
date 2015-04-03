@@ -18,18 +18,19 @@ public class CIT260Team4Battleship{
     public static void main(String[] args) {
         
        CIT260Team4Battleship game = new CIT260Team4Battleship(); // constructor - creates instance of class called "game"
-        /**game.getName(); //calls the getName() method for the "game" instance of the class
-        game.displayHelp(); //calls the getName() method for the "name" instance of the class
-        game.menuItems();*/
-        
-        
+       
+              
         java.awt.EventQueue.invokeLater(new Runnable(){
         public void run(){
             CIT260Team4Battleship.mainFrame = new MainFrame();
             CIT260Team4Battleship.mainFrame.setVisible(true);
         }
+        
+        
     });
-
+ /**game.getName(); //calls the getName() method for the "game" instance of the class
+        game.displayHelp(); //calls the getName() method for the "name" instance of the class
+        game.menuItems();*/
     }
         
         private void getName(){

@@ -6,12 +6,14 @@
 
 package cit260.team4.battleship.frames;
 import cit260.team4.battleship.cit260group4BattleshipMenus.MainMenuView;
+import cit260.team4.battleship.cit260group4BattleshipMenus.HelpMenuView;
 /**
  *
  * @author Jordan
  */
 public class MainFrame extends javax.swing.JFrame {
 private MainMenuView getInput = new MainMenuView();
+
     /** Creates new form MainFrame */
     public MainFrame() {
         initComponents();
@@ -77,6 +79,11 @@ private MainMenuView getInput = new MainMenuView();
         jButton4.setText("Settings");
 
         jbHelp.setText("Help");
+        jbHelp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbHelpActionPerformed(evt);
+            }
+        });
 
         jbExit.setText("Exit");
         jbExit.addActionListener(new java.awt.event.ActionListener() {
@@ -176,6 +183,11 @@ private MainMenuView getInput = new MainMenuView();
         // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_jbExitActionPerformed
+
+    private void jbHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbHelpActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jbHelpActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -8,12 +8,13 @@ package cit260.team4.battleship.cit260group4BattleshipMenus;
 import cit260.team4.battleship.creatorinfo.AuthorCreditView;
 import cit260.team4.battleship.interfaces.EnterInfo;
 import java.util.Scanner;
+import cit260.team4.battleship.frames.HelpFrame;
 /**
  *
  * @author erandall
  */
 public class HelpMenuView extends MenuSuperClass implements EnterInfo{    
-    
+    private static HelpFrame helpFrame;
     public final static String [][] menuItems = {
         {"R", "Rules"},
         {"O", "Objective"},
@@ -33,6 +34,8 @@ public class HelpMenuView extends MenuSuperClass implements EnterInfo{
     
     @Override
     public String getInput(Object object){
+             
+        
         String command;
             Scanner inFile = new Scanner(System.in);
             

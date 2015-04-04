@@ -77,6 +77,11 @@ private MainMenuView getInput = new MainMenuView();
         jButton3.setText("Play Game");
 
         jButton4.setText("Settings");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jbHelp.setText("Help");
         jbHelp.addActionListener(new java.awt.event.ActionListener() {
@@ -188,6 +193,15 @@ private MainMenuView getInput = new MainMenuView();
         // TODO add your handling code here:
         
     }//GEN-LAST:event_jbHelpActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+            // TODO add your handling code here:
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new SettingsFrame().setVisible(true);
+            }
+        });
+    }//GEN-LAST:event_jButton4ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

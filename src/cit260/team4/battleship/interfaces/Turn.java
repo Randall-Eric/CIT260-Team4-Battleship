@@ -11,4 +11,8 @@ package cit260.team4.battleship.interfaces;
  */
 public interface Turn {
     
+    int getGuess();
+    
+    void addGuess(int x[][]);
+    
 }

@@ -80,6 +80,11 @@ private MainMenuView getInput = new MainMenuView();
         jButton2.setText("Options");
 
         jButton3.setText("Play Game");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("Settings");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -218,15 +223,16 @@ private MainMenuView getInput = new MainMenuView();
         });
     }//GEN-LAST:event_jButton1ActionPerformed
 
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-            // TODO add your handling code here:
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new EnterPlayerName().setVisible(true);
             }
         });
-    } 
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

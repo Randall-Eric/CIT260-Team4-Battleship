@@ -73,6 +73,11 @@ public class EnterPlayerName extends javax.swing.JFrame {
         jButtonContinue.setBackground(new java.awt.Color(204, 204, 204));
         jButtonContinue.setFont(new java.awt.Font("Georgia", 0, 11)); // NOI18N
         jButtonContinue.setText("Continue");
+        jButtonContinue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonContinueActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -144,13 +149,15 @@ public class EnterPlayerName extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButtonContinueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonContinueActionPerformed
+        // TODO add your handling code here:
+        this.shipPlacement.shipPlacement();
+    }//GEN-LAST:event_jButtonContinueActionPerformed
+
     /**
      * @param args the command line arguments
      */
-    private void jButtonContinueActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // TODO add your handling code here:
-        this.shipPlacement.shipPlacement();
-    } 
+    
     
     private void jbExitActionPerformed(java.awt.event.ActionEvent evt) {                                       
         // TODO add your handling code here:
